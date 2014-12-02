@@ -178,20 +178,10 @@ ul {
 }
 */
 
-.parcoords {
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    box-shadow: 3px 3px 20px #888888;
-}
-
 .gridelement {
-    background-color: #ffffff;
-    box-shadow: 3px 3px 20px #888888;
-}
-
-.heatmap {
     width: 100%;
     height: 100%;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 20px #888888;
 }
 

@@ -42,8 +42,6 @@ d3.csv('data/testdata.csv', function(data) {
 
 });
 
-//pcz.innerWidth(window.innerWidth);
-
 // update color 
 function change_color(dimension) {
     pcz.svg.selectAll(".dimension")
