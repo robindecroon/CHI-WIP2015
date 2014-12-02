@@ -1,60 +1,6 @@
-html {
-    color: #333;
-    font-family: sans-serif;
-    font-size: 16pt;
-    font-weight: 100;
-    line-height: 1.5em;
-}
-
 html, body {
     height: 100%;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-h2 {
-    font-size: 1.2em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.hot {
-    color: #ec1e1e;
-}
-
-.demo-wrapper {
-    height: 100%;
-    width: 100%;
-    /*background: rgba(0, 0, 0, .03);*/
-    /*border: 3px solid black;*/
-}
-
-.heatmap {
-    width: 100%;
-    height: 100%;
-}
-
-.btn {
-    background: #ec1e1e;
-    padding: 10px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: 5px;
-}
-
-.trigger-refresh, .thankyou, .trigger-reconfig {
-    float: right;
-}
-
-.trigger-refresh, .trigger-reconfig {
-    margin-top: 10px;
-}
-
-.breadcrumb-trail {
-    margin-bottom: 10px;
+    background-color: #ECECEA;
 }
 
 svg {
@@ -79,11 +25,6 @@ svg {
     shape-rendering: crispEdges;
 }
 
-ul
-{
-    list-style-type: none;
-}
-
 .axis line,
 .axis path {
     fill: none;
@@ -106,25 +47,26 @@ ul
     font-weight: bold;
 }
 
-/*.bar.left {*/
-    /*fill: steelblue;*/
-/*}*/
+.bar.left {
+    fill-opacity: .9;
+    fill: steelblue;
+}
 
 .bar.right {
-    fill: firebrick;
+    fill-opacity: .9;
+    fill: #fa9fb5;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .gridster {
-    width: 100%;
-    height: 70%;
+    position: relative;
 }
 
-/*.gridster {*/
-    /*position:relative;*/
-/*}*/
-
 .gridster > * {
-    /*margin: 0 auto;*/
+    margin: 0;
     -webkit-transition: height .4s, width .4s;
     -moz-transition: height .4s, width .4s;
     -o-transition: height .4s, width .4s;
@@ -161,22 +103,21 @@ ul
 }
 
 .gridster .player-revert {
-    z-index: 10!important;
-    -webkit-transition: left .3s, top .3s!important;
-    -moz-transition: left .3s, top .3s!important;
-    -o-transition: left .3s, top .3s!important;
-    transition:  left .3s, top .3s!important;
+    z-index: 10 !important;
+    -webkit-transition: left .3s, top .3s !important;
+    -moz-transition: left .3s, top .3s !important;
+    -o-transition: left .3s, top .3s !important;
+    transition: left .3s, top .3s !important;
 }
 
 .gridster .dragging,
 .gridster .resizing {
-    z-index: 10!important;
+    z-index: 10 !important;
     -webkit-transition: all 0s !important;
     -moz-transition: all 0s !important;
     -o-transition: all 0s !important;
     transition: all 0s !important;
 }
-
 
 .gs-resize-handle {
     position: absolute;
@@ -222,7 +163,7 @@ ul
 }
 
 .gs-resize-disabled .gs-resize-handle {
-    display: none!important;
+    display: none !important;
 }
 
 [data-max-sizex="1"] .gs-resize-handle-x,
@@ -237,7 +178,20 @@ ul
 }
 */
 
-.parcoords{
+.parcoords {
     width: 100%;
-    height:30%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 20px #888888;
 }
+
+.gridelement {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 20px #888888;
+}
+
+.heatmap {
+    width: 100%;
+    height: 100%;
+}
+

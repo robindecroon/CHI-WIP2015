@@ -1,6 +1,4 @@
 transitionDuration = 100;
-gridMargin = 20;
-
 
 // this section uses underscore.js and underscore.math
 var pcz;
@@ -39,6 +37,8 @@ d3.csv('data/testdata.csv', function(data) {
         .on("click", change_color)
         .selectAll(".label")
         .style("font-size", "14px");
+
+    //pcz.style("margin", marginLeft + "px");
 
 });
 

@@ -1,6 +1,5 @@
-var margin = {top: 20, right: 30, bottom: 30, left: 40},
-    width = window.innerWidth/2 - margin.left - margin.right,
-    height = window.innerHeight/3 - margin.top - margin.bottom;
+width = widgetWidth - marginLeft - marginRight;
+height = widgetHeight - marginTop - marginBottom;
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);
@@ -18,10 +17,10 @@ var yAxis = d3.svg.axis()
 
 var chart = d3.select("#demographics")
     .append("svg:svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + marginLeft + marginRight)
+    .attr("height", height + marginTop + marginBottom)
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + marginLeft + "," + marginTop + ")");
 
 function update(data) {
     x.domain(data.map(function (d) {

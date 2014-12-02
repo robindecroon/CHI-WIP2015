@@ -1,21 +1,9 @@
 // SET UP DIMENSIONS
-var w = window.innerWidth/2 - gridMargin,
-    h = window.innerHeight/3;
-
-// margin.middle is distance from center line to each y-axis
-//var margin = {
-//    top: 20,
-//    right: 20,
-//    bottom: 24,
-//    left: 20,
-//    middle: 28
-//};
-
-var margin = {top: 20, right: 30, bottom: 30, left: 40, middle: 28};
-
+var w = widgetWidth - marginLeft - marginRight,
+    h = widgetHeight - marginTop - marginBottom;
 
 // the width of each side of the chart
-var regionWidth = w / 2 - margin.middle;
+var regionWidth = w / 2 - marginMiddle;
 
 // these are the x-coordinates of the y-axes
 var pointA = regionWidth,
@@ -44,11 +32,11 @@ function resetData() {
 
 // CREATE SVG
 var svg = d3.select("#genderpopulation").append('svg')
-    .attr('width', margin.left + w + margin.right)
-    .attr('height', margin.top + h + margin.bottom)
+    .attr('width', marginLeft + w + marginRight)
+    .attr('height', marginTop + h + marginBottom)
     // ADD A GROUP FOR THE SPACE WITHIN THE MARGINS
     .append('g')
-    .attr('transform', translation(margin.left, margin.top));
+    .attr('transform', translation(marginLeft, marginTop));
 
 var yScale = d3.scale.ordinal()
     .domain(exampleData.map(function (d) {
@@ -61,7 +49,7 @@ var yAxisLeft = d3.svg.axis()
     .scale(yScale)
     .orient('right')
     .tickSize(4, 0)
-    .tickPadding(margin.middle - 4);
+    .tickPadding(marginMiddle - 4);
 
 var yAxisRight = d3.svg.axis()
     .scale(yScale)
@@ -119,14 +107,14 @@ function prepareData(data) {
         .domain([0, maxValue])
         .range([0, regionWidth])
         .nice();
-
-    var xScaleLeft = d3.scale.linear()
-        .domain([0, maxValue])
-        .range([regionWidth, 0]);
-
-    var xScaleRight = d3.scale.linear()
-        .domain([0, maxValue])
-        .range([0, regionWidth]);
+    //
+    //var xScaleLeft = d3.scale.linear()
+    //    .domain([0, maxValue])
+    //    .range([regionWidth, 0]);
+    //
+    //var xScaleRight = d3.scale.linear()
+    //    .domain([0, maxValue])
+    //    .range([0, regionWidth]);
 
     var xAxisRight = d3.svg.axis()
         .scale(xScale)

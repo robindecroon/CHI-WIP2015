@@ -2,22 +2,26 @@
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="bower_components/parallel-coordinates/d3.parcoords.css">
-<!--<link rel="stylesheet" href="bower_components/gridster/src/jquery.gridster.css">-->
 
 <link rel="stylesheet" href="css/rdc.chiwipstyle.css">
 
 
 <body>
 
-<div id="patient_filter" class="parcoords"></div>
-
 <div class="gridster">
     <ul>
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="2" id="genderpopulation"></li>
-        <li data-row="1" data-col="2" data-sizex="1" data-sizey="2" id="demographics"></li>
-        <li data-row="2" data-col="1" data-sizex="2" data-sizey="2" class="demo-wrapper">
-            <div class="heatmap" id="map-canvas">
-            </div>
+        <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+            <div id="patient_filter" class="parcoords"></div>
+        </li>
+
+        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+            <div id="genderpopulation" class="gridelement"></div>
+        </li>
+        <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+            <div id="demographics" class="gridelement"></div>
+        </li>
+        <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
+            <div id="map-canvas" class="heatmap gridelement"></div>
         </li>
 
     </ul>
@@ -37,13 +41,13 @@
 <script src="bower_components/heatmap.js/build/heatmap.js"></script>
 <script src="bower_components/heatmap.js/plugins/gmaps-heatmap.js"></script>
 
+<script src="js/rdc.main.js"></script>
 
 <script src="js/rdc.patient-filter.js"></script>
 <script src="js/rdc.patient-demographics.js"></script>
 <script src="js/rdc.genderage.js"></script>
 <script src="js/rdc.heatmap.js"></script>
 
-<script src="js/rdc.main.js"></script>
 
 
 </body>
