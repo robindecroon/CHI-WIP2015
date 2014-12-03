@@ -185,23 +185,31 @@ ul {
     box-shadow: 3px 3px 20px #888888;
 }
 
-.chart rect {
-    stroke: white;
-    fill: steelblue;
-}
+/*.chart rect {*/
+/*stroke: white;*/
+/*fill: steelblue;*/
+/*}*/
 
-.chart text {
+/*.chart text {*/
+/*fill: white;*/
+/*}*/
+
+.barText {
     fill: white;
 }
 
-.chart text.name {
-    fill: #000;
+.axisText {
+    fill: #AAAAAA;
 }
 
-.chart line {
-    stroke: #c1c1c1;
+.axisHelpLines {
+    stroke: #BEBEBE;
 }
 
-.chart .rule {
-    fill: #000;
-}
+/*.chart line {*/
+/*stroke: #c1c1c1;*/
+/*}*/
+
+/*.chart .rule {*/
+/*fill: #000;*/
+/*}*/

@@ -10,7 +10,7 @@ var width = widgetWidth - marginLeft - marginRight,
 
 var icpcChart = d3.select("#icpc")
     .append('svg')
-    .attr('class', 'chart')
+    //.attr('class', 'chart')
     .attr('width', width + marginLeft + marginRight)
     .attr('height', height + marginTop + marginBottom);
 
@@ -78,6 +78,7 @@ function icpc(data) {
         .enter().append("line");
     lines
         .transition().duration(transitionDuration)
+        .attr("class", "axisHelpLines")
         .attr("x1", function (d) {
             return x(d) + left_width;
         })
@@ -96,7 +97,7 @@ function icpc(data) {
         .enter().append("text");
     rules
         .transition().duration(transitionDuration)
-        .attr("class", "rule")
+        .attr("class", "axisText")
         .attr("x", function (d) {
             return x(d) + left_width;
         })
@@ -107,11 +108,12 @@ function icpc(data) {
         .text(String);
     rules.exit().remove();
 
-    var textNames = lowerLayer.selectAll("text.name")
+    var textNames = lowerLayer.selectAll("text.axisText")
         .data(icpcDict);
     textNames
         .enter().append("text");
     textNames
+        .attr('class', 'axisText')
         .transition().duration(transitionDuration)
         .attr("x", 0)
         .attr("y", function (d) {
@@ -119,7 +121,6 @@ function icpc(data) {
         })
         .attr("dy", ".36em")
         .attr("text-anchor", "left")
-        .attr('class', 'name')
         .text(function (d) {
             var text = d.key;
             return text.slice(0, 30);
@@ -132,6 +133,7 @@ function icpc(data) {
         .enter().append("rect");
     bars
         .transition().duration(transitionDuration)
+        .attr("class", "bar")
         .attr("x", left_width)
         .attr("y", function (d) {
             return y(d.key) + gap;
@@ -142,7 +144,7 @@ function icpc(data) {
         .attr("height", barHeight);
     bars.exit().remove();
 
-    var textScores = upperLayer.selectAll("text.score")
+    var textScores = upperLayer.selectAll("text.barText")
         .data(icpcDict);
     textScores
         .enter().append("text");
@@ -157,7 +159,7 @@ function icpc(data) {
         .attr("dx", -10)
         .attr("dy", 0)
         .attr("text-anchor", "end")
-        .attr('class', 'score')
+        .attr('class', 'barText')
         .text(function (d) {
             return d.value;
         });
