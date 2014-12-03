@@ -6,15 +6,19 @@ var gap = 0.5;
 var left_width = 150;
 
 var width = widgetWidth - marginLeft - marginRight,
-    height = widgetHeight - marginTop - marginBottom + nbBarsVariable * gap;
+    height = widgetHeight - marginTop - marginBottom;// + nbBarsVariable * gap;
 
 var icpcChart = d3.select("#icpc")
     .append('svg')
     .attr('class', 'chart')
-    .attr('width', width)
-    .attr('height', height)
-    .append("g")
-    .attr("transform", "translate(10, 20)");
+    .attr('width', width + marginLeft + marginRight)
+    .attr('height', height + marginTop + marginBottom);
+
+var lowerLayer = icpcChart.append("g")
+    .attr("transform", translation(marginLeft, marginTop + 6));
+
+var upperLayer = icpcChart.append("g")
+    .attr("transform", translation(marginLeft, marginTop + 6));
 
 function icpc(data) {
 
@@ -39,7 +43,7 @@ function icpc(data) {
     for (var i = 0; i < a.length; i++) {
         icpcDict.push({
             key: a[i],
-            value: b[i]
+            value: +b[i]
         });
     }
 
@@ -50,7 +54,7 @@ function icpc(data) {
     icpcDict = icpcDict.slice(0, nbBars);
 
     //calculate height
-    var barHeight = (height / nbBars) - (nbBars * gap);
+    var barHeight = (height / nbBars) - ((nbBars + 1) * gap + 2 * gap);
 
     var x = d3.scale.linear()
         .domain([0, d3.max(icpcDict, function (d) {
@@ -64,9 +68,9 @@ function icpc(data) {
     });
     var y = d3.scale.ordinal()
         .domain(yValues)
-        .rangeBands([0, height + nbBars * gap]);
+        .rangeBands([0, height]);
 
-    var lines = icpcChart.selectAll("line")
+    var lines = lowerLayer.selectAll("line")
         .data(x.ticks(d3.max(icpcDict, function (d) {
             return d.value;
         })));
@@ -84,7 +88,7 @@ function icpc(data) {
         .attr("y2", height);
     lines.exit().remove();
 
-    var rules = icpcChart.selectAll(".rule")
+    var rules = lowerLayer.selectAll(".rule")
         .data(x.ticks(d3.max(icpcDict, function (d) {
             return d.value;
         })));
@@ -103,7 +107,26 @@ function icpc(data) {
         .text(String);
     rules.exit().remove();
 
-    var bars = icpcChart.selectAll("rect")
+    var textNames = lowerLayer.selectAll("text.name")
+        .data(icpcDict);
+    textNames
+        .enter().append("text");
+    textNames
+        .transition().duration(transitionDuration)
+        .attr("x", 0)
+        .attr("y", function (d) {
+            return y(d.key) + y.rangeBand() / 2 - 2 * gap;
+        })
+        .attr("dy", ".36em")
+        .attr("text-anchor", "left")
+        .attr('class', 'name')
+        .text(function (d) {
+            var text = d.key;
+            return text.slice(0, 30);
+        });
+    textNames.exit().remove();
+
+    var bars = upperLayer.selectAll("rect")
         .data(icpcDict);
     bars
         .enter().append("rect");
@@ -119,7 +142,7 @@ function icpc(data) {
         .attr("height", barHeight);
     bars.exit().remove();
 
-    var textScores = icpcChart.selectAll("text.score")
+    var textScores = upperLayer.selectAll("text.score")
         .data(icpcDict);
     textScores
         .enter().append("text");
@@ -139,26 +162,4 @@ function icpc(data) {
             return d.value;
         });
     textScores.exit().remove();
-
-    var textNames = icpcChart.selectAll("text.name")
-        .data(icpcDict);
-    textNames
-        .enter().append("text");
-    textNames
-        .transition().duration(transitionDuration)
-        .attr("x", 0)
-        //.attr("y", function (d, i) {
-        //    return y(d) + y.rangeBand() / 2 ;
-        //})
-        .attr("y", function (d) {
-            return y(d.key) + y.rangeBand() / 2 - 2 * gap;
-        })
-        .attr("dy", ".36em")
-        .attr("text-anchor", "left")
-        .attr('class', 'name')
-        .text(function (d) {
-            var text = d.key;
-            return text.slice(0, 30);
-        });
-    textNames.exit().remove();
 }

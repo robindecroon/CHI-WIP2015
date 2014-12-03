@@ -205,13 +205,3 @@ ul {
 .chart .rule {
     fill: #000;
 }
-
-/* removed the while stroke as we don't need it anymore */
-#step-5 .chart rect {
-    stroke: none;
-}
-
-/* a bit of hovering effect for each bar */
-#step-5 .chart rect:hover {
-    fill: #64707D;
-}
