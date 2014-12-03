@@ -11,6 +11,7 @@ var zcolorscale = d3.scale.linear()
 
 // load csv file and create the chart
 d3.csv('data/testdata.csv', function(data) {
+    icpc(data);
     createHeatmap(data);
     update(data);
     prepareData(data);
@@ -28,6 +29,7 @@ d3.csv('data/testdata.csv', function(data) {
             update(items);
             prepareData(items);
             createHeatmap(items);
+            icpc(items);
         });
 
     change_color("systolische bloeddruk");
