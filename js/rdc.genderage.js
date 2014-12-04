@@ -40,11 +40,14 @@ var genderAgelowerLayer = genderAgeChart.append('g')
 var genderAgemiddleLayer = genderAgeChart.append('g')
     .attr('transform', translation(marginLeft, marginTop));
 
-var genderAgeLeftUpperLayer = genderAgeChart.append('g')
+var genderAgeUpperLayer = genderAgeChart.append('g')
     .attr('transform', translation(marginLeft, marginTop));
 
-var genderAgeRightUpperLayer = genderAgeChart.append('g')
-    .attr('transform', translation(marginLeft, marginTop));
+//var genderAgeLeftUpperLayer = genderAgeChart.append('g')
+//    .attr('transform', translation(marginLeft, marginTop));
+//
+//var genderAgeRightUpperLayer = genderAgeChart.append('g')
+//    .attr('transform', translation(marginLeft, marginTop));
 
 ageGroupNames = ageGroups.map(function (d) {
     return d.group;
@@ -187,7 +190,7 @@ function prepareData(data) {
 
     rightBars.exit().remove();
 
-    var leftGenderAgeTextScores = genderAgeLeftUpperLayer.selectAll("text.barText")
+    var leftGenderAgeTextScores = genderAgeUpperLayer.selectAll("text.barTextR")
         .data(ageGroups);
     leftGenderAgeTextScores
         .enter().append("text");
@@ -202,14 +205,14 @@ function prepareData(data) {
         .attr("dx", -35)
         .attr("dy", 0)
         .attr("text-anchor", "end")
-        .attr('class', 'barText')
+        .attr('class', 'barTextR')
         .text(function (d) {
             if (d.female != 0)
                 return d3.format('%')(percentage(d.female));
         });
     leftGenderAgeTextScores.exit().remove();
 
-    var rightGenderAgeTextScores = genderAgeRightUpperLayer.selectAll("text.barText")
+    var rightGenderAgeTextScores = genderAgeUpperLayer.selectAll("text.barText")
         .data(ageGroups);
     rightGenderAgeTextScores
         .enter().append("text");

@@ -28,13 +28,13 @@ svg {
 .axis line,
 .axis path {
     fill: none;
-    stroke: #AAAAAA;
+    stroke: black;
     shape-rendering: crispEdges;
 }
 
 .axis text {
     fill: #AAAAAA;
-    /*text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;*/
+    text-shadow: 0 2px 0 #fff, 2px 0 0 #fff, 0 -2px 0 #fff, -2px 0 0 #fff;
     cursor: move;
 }
 
@@ -190,8 +190,14 @@ ul {
     fill: #AAAAAA;
 }
 
+.barTextR {
+    fill: white;
+    text-shadow: 0 1px 0 #fa9fb5, 1px 0 0 #fa9fb5, 0 -1px 0 #fa9fb5, -1px 0 0 #fa9fb5;
+}
+
 .barText {
     fill: white;
+    text-shadow: 0 1px 0 steelblue, 1px 0 0 steelblue, 0 -1px 0 steelblue, -1px 0 0 steelblue;
 }
 
 .axisText {
