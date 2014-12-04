@@ -92,24 +92,24 @@ function icpc(data) {
         .attr("y2", height);
     lines.exit().remove();
 
-    var rules = lowerLayer.selectAll(".rule")
-        .data(x.ticks(d3.max(icpcDict, function (d) {
-            return d.value;
-        })));
-    rules
-        .enter().append("text");
-    rules
-        .transition().duration(transitionDuration)
-        .attr("class", "axisText")
-        .attr("x", function (d) {
-            return x(d) + left_width;
-        })
-        .attr("y", 0)
-        .attr("dy", -6)
-        .attr("text-anchor", "middle")
-        .attr("font-size", 10)
-        .text(String);
-    rules.exit().remove();
+    //var rules = lowerLayer.selectAll(".rule")
+    //    .data(x.ticks(d3.max(icpcDict, function (d) {
+    //        return d.value;
+    //    })));
+    //rules
+    //    .enter().append("text");
+    //rules
+    //    .transition().duration(transitionDuration)
+    //    .attr("class", "axisText")
+    //    .attr("x", function (d) {
+    //        return x(d) + left_width;
+    //    })
+    //    .attr("y", 0)
+    //    .attr("dy", -6)
+    //    .attr("text-anchor", "middle")
+    //    .attr("font-size", 10)
+    //    .text(String);
+    //rules.exit().remove();
 
     var textNames = lowerLayer.selectAll("text.axisText")
         .data(icpcDict);

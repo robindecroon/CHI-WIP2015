@@ -199,7 +199,7 @@ ul {
 }
 
 .axisHelpLines {
-    stroke-width: 2px;
+    stroke-width: 1px;
     stroke: white;
 }
 
@@ -209,7 +209,7 @@ ul {
 
 .axis.x.left line, .axis.x.right line {
     stroke: white;
-    stroke-width: 2px;
+    stroke-width: 1px;
 }
 
 .axis.x.left text, .axis.x.right text {

@@ -187,7 +187,7 @@ function prepareData(data) {
 
     rightBars.exit().remove();
 
-    var leftGenderAgeTextScores = genderAgeLeftUpperLayer.selectAll("text.outsideBarText")
+    var leftGenderAgeTextScores = genderAgeLeftUpperLayer.selectAll("text.barText")
         .data(ageGroups);
     leftGenderAgeTextScores
         .enter().append("text");
@@ -199,17 +199,17 @@ function prepareData(data) {
         .attr("y", function (d, i) {
             return yScale(d.group) + yScale.rangeBand() / 2 + genderAgeGap;
         })
-        .attr("dx", -5)
+        .attr("dx", -35)
         .attr("dy", 0)
         .attr("text-anchor", "end")
-        .attr('class', 'outsideBarText')
+        .attr('class', 'barText')
         .text(function (d) {
             if (d.female != 0)
                 return d3.format('%')(percentage(d.female));
         });
     leftGenderAgeTextScores.exit().remove();
 
-    var rightGenderAgeTextScores = genderAgeRightUpperLayer.selectAll("text.outsideBarText")
+    var rightGenderAgeTextScores = genderAgeRightUpperLayer.selectAll("text.barText")
         .data(ageGroups);
     rightGenderAgeTextScores
         .enter().append("text");
@@ -221,10 +221,10 @@ function prepareData(data) {
         .attr("y", function (d, i) {
             return yScale(d.group) + yScale.rangeBand() / 2 + genderAgeGap;
         })
-        .attr("dx", 5)
+        .attr("dx", +30)
         .attr("dy", 0)
         .attr("text-anchor", "end")
-        .attr('class', 'outsideBarText')
+        .attr('class', 'barText')
         .text(function (d) {
             if (d.male != 0)
                 return d3.format('%')(percentage(d.male));
