@@ -7,7 +7,7 @@ var marginTop = 20;
 var marginRight = 30;
 var marginBottom = 30;
 var marginLeft = 30;
-var marginMiddle = 28;
+var marginMiddle = 22;
 
 widgetWidth = window.innerWidth / nbWidgetsHorizontal - 2 * gridMargin;
 widgetHeight = window.innerHeight / nbWidgetsVertical - 2 * gridMargin;

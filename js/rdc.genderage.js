@@ -1,13 +1,15 @@
 // SET UP DIMENSIONS
-var w = widgetWidth - marginLeft - marginRight,
-    h = widgetHeight - marginTop - marginBottom;
+var genderAgeWidth = widgetWidth - marginLeft - marginRight,
+    genderAgeHeight = widgetHeight - marginTop - marginBottom,
+    genderAgeGap = 0.5,
+    genderAgeTickSize = 5;
 
 // the width of each side of the chart
-var regionWidth = w / 2 - marginMiddle;
+var regionWidth = genderAgeWidth / 2 - marginMiddle;
 
 // these are the x-coordinates of the y-axes
 var pointA = regionWidth,
-    pointB = w - regionWidth;
+    pointB = genderAgeWidth - regionWidth;
 
 var ageGroups = [];
 function resetData() {
@@ -23,48 +25,49 @@ function resetData() {
         {group: '80-89', male: 0, female: 0},
         {group: '90-99', male: 0, female: 0},
         {group: '100-109', male: 0, female: 0},
-        {group: '110-119', male: 0, female: 0}
-    ];
+        {group: '110-119', male: 0, female: 0}];
 }
 resetData();
 
 // CREATE SVG
-var svg = d3.select("#genderpopulation").append('svg')
-    .attr('width', marginLeft + w + marginRight)
-    .attr('height', marginTop + h + marginBottom)
-    .append('g')
+var genderAgeChart = d3.select("#genderpopulation").append('svg')
+    .attr('width', marginLeft + genderAgeWidth + marginRight)
+    .attr('height', marginTop + genderAgeHeight + marginBottom);
+
+var genderAgelowerLayer = genderAgeChart.append('g')
     .attr('transform', translation(marginLeft, marginTop));
 
+var genderAgemiddleLayer = genderAgeChart.append('g')
+    .attr('transform', translation(marginLeft, marginTop));
+
+var genderAgeLeftUpperLayer = genderAgeChart.append('g')
+    .attr('transform', translation(marginLeft, marginTop));
+
+var genderAgeRightUpperLayer = genderAgeChart.append('g')
+    .attr('transform', translation(marginLeft, marginTop));
+
+ageGroupNames = ageGroups.map(function (d) {
+    return d.group;
+})
+
+//var genderAgeBarHeight = (height / nbBars) - ((nbBars + 1) * gap + 2 * gap);
+
+
 var yScale = d3.scale.ordinal()
-    .domain(ageGroups.map(function (d) {
-        return d.group;
-    }))
-    .rangeRoundBands([h, 0], 0.1);
+    .domain(ageGroupNames)
+    .rangeBands([genderAgeHeight, 0]);
 
-// y axis is always the same
-var yAxisLeft = d3.svg.axis()
-    .scale(yScale)
-    .orient('right')
-    .tickSize(4, 0)
-    .tickPadding(marginMiddle - 4);
-
-var yAxisRight = d3.svg.axis()
-    .scale(yScale)
-    .orient('left')
-    .tickSize(4, 0)
-    .tickFormat('');
-
-svg.append('g')
-    .attr('class', 'axis y left')
-    .attr('transform', translation(pointA, 0))
-    .call(yAxisLeft)
-    .selectAll('text')
-    .style('text-anchor', 'middle');
-
-svg.append('g')
-    .attr('class', 'axis y right')
-    .attr('transform', translation(pointB, 0))
-    .call(yAxisRight);
+genderAgelowerLayer.selectAll("text.axisText")
+    .data(ageGroupNames)
+    .enter().append("text")
+    .attr('class', 'axisText')
+    .attr("x", pointA + marginMiddle)
+    .attr("y", function (d) {
+        return yScale(d) + yScale.rangeBand() / 2 + genderAgeGap;
+    })
+    .attr("dy", ".36em")
+    .attr("text-anchor", "middle")
+    .text(String);
 
 function prepareData(data) {
     resetData();
@@ -104,43 +107,45 @@ function prepareData(data) {
         .domain([0, maxValue])
         .range([0, regionWidth])
         .nice();
-    //
-    //var xScaleLeft = d3.scale.linear()
-    //    .domain([0, maxValue])
-    //    .range([regionWidth, 0]);
-    //
-    //var xScaleRight = d3.scale.linear()
-    //    .domain([0, maxValue])
-    //    .range([0, regionWidth]);
 
     var xAxisRight = d3.svg.axis()
         .scale(xScale)
         .orient('bottom')
+        .ticks(genderAgeTickSize)
+        //.tickSize(0)
         .tickFormat(d3.format('%'));
 
     var xAxisLeft = d3.svg.axis()
         // REVERSE THE X-AXIS SCALE ON THE LEFT SIDE BY REVERSING THE RANGE
         .scale(xScale.copy().range([pointA, 0]))
         .orient('bottom')
+        .ticks(genderAgeTickSize)
+        //.tickSize(0)
         .tickFormat(d3.format('%'));
 
-    // DRAW AXES
+    //DRAW AXES
 
-    svg.select('.axis.x.left').remove();
-    svg.select('.axis.x.right').remove();
+    genderAgemiddleLayer.select('.axis.x.left').remove();
+    genderAgemiddleLayer.select('.axis.x.right').remove();
 
-    svg.append('g')
+    genderAgemiddleLayer.append('g')
         .attr('class', 'axis x left')
-        .attr('transform', translation(0, h))
+        .attr('transform', translation(0, genderAgeHeight))
         .call(xAxisLeft);
 
-    svg.append('g')
+    genderAgemiddleLayer.append('g')
         .attr('class', 'axis x right')
-        .attr('transform', translation(pointB, h))
+        .attr('transform', translation(pointB, genderAgeHeight))
         .call(xAxisRight);
 
+    genderAgemiddleLayer.selectAll("g.axis.x.left g.tick line")
+        .attr("y2", -genderAgeHeight);
+
+    genderAgemiddleLayer.selectAll("g.axis.x.right g.tick line")
+        .attr("y2", -genderAgeHeight);
+
     // DRAW BARS
-    var leftBars = svg.selectAll('.bar.left')
+    var leftBars = genderAgelowerLayer.selectAll('.bar.left')
         .data(ageGroups);
 
     leftBars
@@ -148,12 +153,12 @@ function prepareData(data) {
         .attr('class', 'bar left')
         .attr('transform', translation(pointA, 0) + 'scale(-1,1)')
         .attr('x', 0)
-        .attr('height', yScale.rangeBand());
+        .attr('height', yScale.rangeBand() - ageGroupNames.length * genderAgeGap);
 
     leftBars
         .transition().duration(transitionDuration)
         .attr('y', function (d) {
-            return yScale(d.group);
+            return yScale(d.group) + genderAgeGap;
         })
         .attr('width', function (d) {
             return xScale(percentage(d.male));
@@ -161,7 +166,7 @@ function prepareData(data) {
 
     leftBars.exit().remove();
 
-    var rightBars = svg.selectAll('.bar.right')
+    var rightBars = genderAgelowerLayer.selectAll('.bar.right')
         .data(ageGroups);
 
     rightBars
@@ -169,18 +174,63 @@ function prepareData(data) {
         .attr('class', 'bar right')
         .attr('transform', translation(pointB, 0))
         .attr('x', 0)
-        .attr('height', yScale.rangeBand());
+        .attr('height', yScale.rangeBand() - ageGroupNames.length * genderAgeGap);
 
     rightBars
         .transition().duration(transitionDuration)
         .attr('y', function (d) {
-            return yScale(d.group);
+            return yScale(d.group) + genderAgeGap;
         })
         .attr('width', function (d) {
             return xScale(percentage(d.female));
         });
 
     rightBars.exit().remove();
+
+    var leftGenderAgeTextScores = genderAgeLeftUpperLayer.selectAll("text.outsideBarText")
+        .data(ageGroups);
+    leftGenderAgeTextScores
+        .enter().append("text");
+    leftGenderAgeTextScores
+        .transition().duration(transitionDuration)
+        .attr("x", function (d) {
+            return xScale(percentage(d.female)) + widgetWidth / 2 + marginMiddle;
+        })
+        .attr("y", function (d, i) {
+            return yScale(d.group) + yScale.rangeBand() / 2 + genderAgeGap;
+        })
+        .attr("dx", -5)
+        .attr("dy", 0)
+        .attr("text-anchor", "end")
+        .attr('class', 'outsideBarText')
+        .text(function (d) {
+            if (d.female != 0)
+                return d3.format('%')(percentage(d.female));
+        });
+    leftGenderAgeTextScores.exit().remove();
+
+    var rightGenderAgeTextScores = genderAgeRightUpperLayer.selectAll("text.outsideBarText")
+        .data(ageGroups);
+    rightGenderAgeTextScores
+        .enter().append("text");
+    rightGenderAgeTextScores
+        .transition().duration(transitionDuration)
+        .attr("x", function (d) {
+            return widgetWidth / 2 - xScale(percentage(d.male)) - marginLeft - marginBottom;
+        })
+        .attr("y", function (d, i) {
+            return yScale(d.group) + yScale.rangeBand() / 2 + genderAgeGap;
+        })
+        .attr("dx", 5)
+        .attr("dy", 0)
+        .attr("text-anchor", "end")
+        .attr('class', 'outsideBarText')
+        .text(function (d) {
+            if (d.male != 0)
+                return d3.format('%')(percentage(d.male));
+        });
+    rightGenderAgeTextScores.exit().remove();
+
 
 }
 

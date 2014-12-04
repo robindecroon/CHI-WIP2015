@@ -186,6 +186,10 @@ ul {
     box-shadow: 3px 3px 20px #888888;
 }
 
+.outsideBarText {
+    fill: #AAAAAA;
+}
+
 .barText {
     fill: white;
 }
@@ -197,4 +201,17 @@ ul {
 .axisHelpLines {
     stroke-width: 2px;
     stroke: white;
+}
+
+.axis.x.left path, .axis.x.right path {
+    stroke: white;
+}
+
+.axis.x.left line, .axis.x.right line {
+    stroke: white;
+    stroke-width: 2px;
+}
+
+.axis.x.left text, .axis.x.right text {
+    fill: white;
 }
