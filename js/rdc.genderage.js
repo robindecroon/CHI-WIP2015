@@ -9,7 +9,8 @@ var regionWidth = genderAgeWidth / 2 - marginMiddle;
 
 // these are the x-coordinates of the y-axes
 var pointA = regionWidth,
-    pointB = genderAgeWidth - regionWidth;
+    pointB = genderAgeWidth - regionWidth,
+    titleOffset = 15;
 
 var ageGroups = [];
 function resetData() {
@@ -34,14 +35,21 @@ var genderAgeChart = d3.select("#genderpopulation").append('svg')
     .attr('width', marginLeft + genderAgeWidth + marginRight)
     .attr('height', marginTop + genderAgeHeight + marginBottom);
 
+genderAgeChart.append("text")
+    .attr("x", width / 2 + marginLeft)
+    .attr("y", marginTop / 2 + titleOffset)
+    .attr("text-anchor", "middle")
+    .attr("class", "chart-title")
+    .text("Bevolkingspiramide");
+
 var genderAgelowerLayer = genderAgeChart.append('g')
-    .attr('transform', translation(marginLeft, marginTop));
+    .attr('transform', translation(marginLeft, marginTop + titleOffset));
 
 var genderAgemiddleLayer = genderAgeChart.append('g')
-    .attr('transform', translation(marginLeft, marginTop));
+    .attr('transform', translation(marginLeft, marginTop + titleOffset));
 
 var genderAgeUpperLayer = genderAgeChart.append('g')
-    .attr('transform', translation(marginLeft, marginTop));
+    .attr('transform', translation(marginLeft, marginTop + titleOffset));
 
 //var genderAgeLeftUpperLayer = genderAgeChart.append('g')
 //    .attr('transform', translation(marginLeft, marginTop));
@@ -66,7 +74,7 @@ genderAgelowerLayer.selectAll("text.axisText")
     .attr('class', 'axisText')
     .attr("x", pointA + marginMiddle)
     .attr("y", function (d) {
-        return yScale(d) + yScale.rangeBand() / 2 + genderAgeGap;
+        return yScale(d) + yScale.rangeBand() / 2;
     })
     .attr("dy", ".36em")
     .attr("text-anchor", "middle")

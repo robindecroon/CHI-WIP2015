@@ -17,6 +17,12 @@ d3.csv('data/testdata.csv', function(data) {
     prepareData(data);
     pcz = d3.parcoords()("#patient_filter")
         .data(data)
+        .margin({
+            top: marginTop * 2,
+            left: marginLeft,
+            right: marginRight,
+            bottom: marginBottom
+        })
         .render()
         .dimensions(['systolische bloeddruk','diastolische bloeddruk','gewicht','glycemie','leeftijd','#dagen sinds laatste bezoek'])
         .render()

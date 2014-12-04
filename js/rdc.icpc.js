@@ -14,14 +14,21 @@ var icpcChart = d3.select("#icpc")
     .attr('width', width + marginLeft + marginRight)
     .attr('height', height + marginTop + marginBottom);
 
+icpcChart.append("text")
+    .attr("x", width / 2 + marginLeft)
+    .attr("y", marginTop / 2 + titleOffset)
+    .attr("text-anchor", "middle")
+    .attr("class", "chart-title")
+    .text("Meest voorkomende aandoeningen");
+
 var lowerLayer = icpcChart.append("g")
-    .attr("transform", translation(marginLeft, marginTop + 6));
+    .attr("transform", translation(marginLeft, marginTop + titleOffset));
 
 var middleLayer = icpcChart.append("g")
-    .attr("transform", translation(marginLeft, marginTop + 6));
+    .attr("transform", translation(marginLeft, marginTop + titleOffset));
 
 var upperLayer = icpcChart.append("g")
-    .attr("transform", translation(marginLeft, marginTop + 6));
+    .attr("transform", translation(marginLeft, marginTop + titleOffset));
 
 function icpc(data) {
 
