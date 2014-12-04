@@ -17,6 +17,9 @@ var icpcChart = d3.select("#icpc")
 var lowerLayer = icpcChart.append("g")
     .attr("transform", translation(marginLeft, marginTop + 6));
 
+var middleLayer = icpcChart.append("g")
+    .attr("transform", translation(marginLeft, marginTop + 6));
+
 var upperLayer = icpcChart.append("g")
     .attr("transform", translation(marginLeft, marginTop + 6));
 
@@ -70,7 +73,7 @@ function icpc(data) {
         .domain(yValues)
         .rangeBands([0, height]);
 
-    var lines = lowerLayer.selectAll("line")
+    var lines = upperLayer.selectAll("line")
         .data(x.ticks(d3.max(icpcDict, function (d) {
             return d.value;
         })));
@@ -127,7 +130,7 @@ function icpc(data) {
         });
     textNames.exit().remove();
 
-    var bars = upperLayer.selectAll("rect")
+    var bars = middleLayer.selectAll("rect")
         .data(icpcDict);
     bars
         .enter().append("rect");
@@ -144,7 +147,7 @@ function icpc(data) {
         .attr("height", barHeight);
     bars.exit().remove();
 
-    var textScores = upperLayer.selectAll("text.barText")
+    var textScores = middleLayer.selectAll("text.barText")
         .data(icpcDict);
     textScores
         .enter().append("text");

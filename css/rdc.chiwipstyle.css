@@ -28,12 +28,13 @@ svg {
 .axis line,
 .axis path {
     fill: none;
-    stroke: #000;
+    stroke: #AAAAAA;
     shape-rendering: crispEdges;
 }
 
 .axis text {
-    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+    fill: #AAAAAA;
+    /*text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;*/
     cursor: move;
 }
 
@@ -185,15 +186,6 @@ ul {
     box-shadow: 3px 3px 20px #888888;
 }
 
-/*.chart rect {*/
-/*stroke: white;*/
-/*fill: steelblue;*/
-/*}*/
-
-/*.chart text {*/
-/*fill: white;*/
-/*}*/
-
 .barText {
     fill: white;
 }
@@ -203,13 +195,6 @@ ul {
 }
 
 .axisHelpLines {
-    stroke: #BEBEBE;
+    stroke-width: 2px;
+    stroke: white;
 }
-
-/*.chart line {*/
-/*stroke: #c1c1c1;*/
-/*}*/
-
-/*.chart .rule {*/
-/*fill: #000;*/
-/*}*/

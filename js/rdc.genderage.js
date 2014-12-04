@@ -9,12 +9,9 @@ var regionWidth = w / 2 - marginMiddle;
 var pointA = regionWidth,
     pointB = w - regionWidth;
 
-// some contrived data
-var exampleData;
-resetData();
-
+var ageGroups = [];
 function resetData() {
-    exampleData = [
+    ageGroups = [
         {group: '0-9', male: 0, female: 0},
         {group: '10-19', male: 0, female: 0},
         {group: '20-29', male: 0, female: 0},
@@ -29,22 +26,22 @@ function resetData() {
         {group: '110-119', male: 0, female: 0}
     ];
 }
+resetData();
 
 // CREATE SVG
 var svg = d3.select("#genderpopulation").append('svg')
     .attr('width', marginLeft + w + marginRight)
     .attr('height', marginTop + h + marginBottom)
-    // ADD A GROUP FOR THE SPACE WITHIN THE MARGINS
     .append('g')
     .attr('transform', translation(marginLeft, marginTop));
 
 var yScale = d3.scale.ordinal()
-    .domain(exampleData.map(function (d) {
+    .domain(ageGroups.map(function (d) {
         return d.group;
     }))
     .rangeRoundBands([h, 0], 0.1);
 
-// SET UP AXES
+// y axis is always the same
 var yAxisLeft = d3.svg.axis()
     .scale(yScale)
     .orient('right')
@@ -74,14 +71,14 @@ function prepareData(data) {
     data.forEach(function (patient) {
         var groupID = Math.floor(patient.leeftijd / 10);
         if (patient.geslacht == 'male') {
-            exampleData[groupID].male++;
+            ageGroups[groupID].male++;
         } else {
-            exampleData[groupID].female++;
+            ageGroups[groupID].female++;
         }
     });
 
     // GET THE TOTAL POPULATION SIZE AND CREATE A FUNCTION FOR RETURNING THE PERCENTAGE
-    var totalPopulation = d3.sum(exampleData, function (d) {
+    var totalPopulation = d3.sum(ageGroups, function (d) {
             return d.male + d.female;
         }),
         percentage = function (d) {
@@ -91,10 +88,10 @@ function prepareData(data) {
     // find the maximum data value on either side
     //  since this will be shared by both of the x-axes
     var maxValue = Math.max(
-        d3.max(exampleData, function (d) {
+        d3.max(ageGroups, function (d) {
             return percentage(d.male);
         }),
-        d3.max(exampleData, function (d) {
+        d3.max(ageGroups, function (d) {
             return percentage(d.female);
         })
     );
@@ -144,7 +141,7 @@ function prepareData(data) {
 
     // DRAW BARS
     var leftBars = svg.selectAll('.bar.left')
-        .data(exampleData);
+        .data(ageGroups);
 
     leftBars
         .enter().append('rect')
@@ -165,7 +162,7 @@ function prepareData(data) {
     leftBars.exit().remove();
 
     var rightBars = svg.selectAll('.bar.right')
-        .data(exampleData);
+        .data(ageGroups);
 
     rightBars
         .enter().append('rect')
