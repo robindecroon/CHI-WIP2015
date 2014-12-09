@@ -18,7 +18,7 @@
             <div id="genderpopulation" class="gridelement"></div>
         </li>
         <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-            <div id="demographics" class="gridelement"></div>
+            <div id="income" class="gridelement"></div>
         </li>
         <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
             <div id="map-canvas" class="heatmap gridelement"></div>
@@ -28,12 +28,27 @@
             <div id="icpc" class="gridelement"></div>
         </li>
 
+        <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
+            <div id="degree" class="gridelement"></div>
+        </li>
+
+        <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+            <div id="physician" class="gridelement"></div>
+        </li>
+
+        <!--<li data-row="5" data-col="1" data-sizex="1" data-sizey="1">-->
+        <!--<div id="gauge" class="gridelement" style="width: 100%; height: 100%"></div>-->
+        <!--</li>-->
+
     </ul>
 </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 <script src="bower_components/gridster/dist/jquery.gridster.min.js"></script>
+
+<script src="bower_components/justgage-bower/raphael.2.1.0.min.js"></script>
+<script src="bower_components/justgage-bower/justgage.js"></script>
 
 <script src="bower_components/underscore/underscore-min.js"></script>
 <script src="bower_components/underscore.math/underscore.math.js"></script>
@@ -47,12 +62,12 @@
 
 <script src="js/rdc.main.js"></script>
 
-<script src="js/rdc.patient-filter.js"></script>
 <script src="js/rdc.patient-demographics.js"></script>
-<script src="js/rdc.genderage.js"></script>
+<script src="js/rdc.double-horizontal-bar-chart.js"></script>
 <script src="js/rdc.heatmap.js"></script>
-<script src="js/rdc.icpc.js"></script>
-
+<script src="js/rdc.horizontal-bar-chart.js"></script>
+<script src="js/rdc.gauge.js"></script>
+<script src="js/rdc.patient-filter.js"></script>
 
 
 </body>

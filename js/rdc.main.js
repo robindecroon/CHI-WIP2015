@@ -9,17 +9,15 @@ var marginBottom = 30;
 var marginLeft = 30;
 var marginMiddle = 22;
 
-widgetWidth = window.innerWidth / nbWidgetsHorizontal - 2 * gridMargin;
-widgetHeight = window.innerHeight / nbWidgetsVertical - 2 * gridMargin;
+widgetWidth = window.innerWidth / nbWidgetsHorizontal - nbWidgetsHorizontal * gridMargin;
+widgetHeight = window.innerHeight / nbWidgetsVertical - nbWidgetsHorizontal * gridMargin;
 
 $(function () { //DOM Ready
 
     $(".gridster ul").gridster({
         widget_margins: [gridMargin / 2, gridMargin / 2],
         widget_base_dimensions: [widgetWidth, widgetHeight]
-    });
-
-    //$(".gridster ul").gridster(options).width("auto");
+    }).gridster().data('gridster').disable();
 
 
 });

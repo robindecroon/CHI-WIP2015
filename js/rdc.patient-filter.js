@@ -9,12 +9,25 @@ var zcolorscale = d3.scale.linear()
     .range(["#fc8d59", "#91cf60", "#91cf60", "#fc8d59"])
     .interpolate(d3.interpolateLab);
 
+
+var icpcChart = new HorizontalChart("#icpc", "Meest voorkomende aandoeningen", "icpc");
+var genderAgeChart = new DoubleHorizontalBarChart("#genderpopulation", "Bevolkingspiramide");
+var incomeChart = new HorizontalChart("#income", "Religie", "religie");
+var degreeChart = new HorizontalChart("#degree", "Hoogste diploma", "diploma");
+var physicianChart = new HorizontalChart("#physician", "Hoofdverzorger", "hoofddokter");
+//var marriedGauge =  new Gauge("#gauge", 67, 0, 100, "Getrouwd");
+
+var g = new JustGage({
+    id: "gauge",
+    value: 67,
+    min: 0,
+    max: 100,
+    title: "Visitors"
+});
+
 // load csv file and create the chart
 d3.csv('data/testdata.csv', function(data) {
-    icpc(data);
-    createHeatmap(data);
-    update(data);
-    prepareData(data);
+    updateWidgets(data);
     pcz = d3.parcoords()("#patient_filter")
         .data(data)
         .margin({
@@ -24,7 +37,7 @@ d3.csv('data/testdata.csv', function(data) {
             bottom: marginBottom
         })
         .render()
-        .dimensions(['systolische bloeddruk','diastolische bloeddruk','gewicht','glycemie','leeftijd','#dagen sinds laatste bezoek'])
+        .dimensions(['#dagen sinds bezoek', 'inkomen', 'systolische bloeddruk', 'diastolische bloeddruk', 'gewicht', 'glycemie', 'leeftijd'])
         .render()
         .createAxes()
         .alpha(0.9)
@@ -32,10 +45,7 @@ d3.csv('data/testdata.csv', function(data) {
         .shadows()
         .brushMode("1D-axes")  // enable brushing
         .on("brush", function(items) {
-            update(items);
-            prepareData(items);
-            createHeatmap(items);
-            icpc(items);
+            updateWidgets(items)
         });
 
     change_color("systolische bloeddruk");
@@ -46,11 +56,19 @@ d3.csv('data/testdata.csv', function(data) {
         .selectAll(".label")
         .style("font-size", "14px");
 
-    //pcz.style("margin", marginLeft + "px");
-
 });
 
-// update color 
+function updateWidgets(items) {
+    window.data = items;
+    createHeatmap(items);
+    genderAgeChart.prepareData(items, "leeftijd", "geslacht");
+    icpcChart.createChart(items);
+    incomeChart.createChart(items);
+    degreeChart.createChart(items);
+    physicianChart.createChart(items);
+}
+
+// update color
 function change_color(dimension) {
     pcz.svg.selectAll(".dimension")
         .style("font-weight", "normal")
