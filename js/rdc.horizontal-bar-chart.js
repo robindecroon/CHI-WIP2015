@@ -47,7 +47,11 @@ HorizontalChart.prototype.createChart = function (data) {
     }
     ;
 
-    nbBars = d3.min([nbBars, chartDict.length]);
+    var tempCount = chartDict.filter(function (d) {
+        return d.value != 0;
+    })
+
+    nbBars = d3.min([nbBars, tempCount.length]);
     chartDict = chartDict.slice(0, nbBars);
 
     //calculate height
@@ -122,13 +126,13 @@ HorizontalChart.prototype.createChart = function (data) {
         .attr("width", function (d) {
             return x(d.value);
         })
-        .attr("height", barHeight);
-    //.style("fill", function (d) {
-    //    if (d.selected == true)
-    //        return "red"
-    //    else
-    //        return "steelblue"
-    //});
+        .attr("height", barHeight)
+        .style("fill", function (d) {
+            if (_this.currentFilter)
+                return "#0F4D92";
+            else
+                return "steelblue";
+        });
     bars.exit().remove();
 
     bars
