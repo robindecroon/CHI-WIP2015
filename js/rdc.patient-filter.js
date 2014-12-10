@@ -10,11 +10,11 @@ var zcolorscale = d3.scale.linear()
     .interpolate(d3.interpolateLab);
 
 
-var icpcChart = new HorizontalChart("#icpc", "Meest voorkomende aandoeningen", "icpc");
+var icpcChart = new HorizontalChart("#icpc", "Meest voorkomende aandoeningen");
 var genderAgeChart = new DoubleHorizontalBarChart("#genderpopulation", "Bevolkingspiramide");
-var religionChart = new HorizontalChart("#religion", "Religie", "religie");
-var degreeChart = new HorizontalChart("#degree", "Hoogste diploma", "diploma");
-var physicianChart = new HorizontalChart("#physician", "Hoofdverzorger", "hoofddokter");
+var religionChart = new HorizontalChart("#religion", "Religie");
+var degreeChart = new HorizontalChart("#degree", "Hoogste diploma");
+var physicianChart = new HorizontalChart("#physician", "Hoofdverzorger");
 //var marriedGauge =  new Gauge("#gauge", 67, 0, 100, "Getrouwd");
 
 var g = new JustGage({
@@ -99,7 +99,7 @@ function drawParCoords(data) {
 }
 
 
-function updateWidgets(items) {
+function updateWidgets() {
     var filtered = window.filtered;
     if (filtered) {
         crossFilterDimensions.forEach(function (dimension) {
@@ -143,6 +143,7 @@ function updateWidgets(items) {
     var filteredData = crossFilterDimensions[0].crossDim.top(Infinity);
     createHeatmap(filteredData);
     genderAgeChart.prepareData(filteredData, "leeftijd", "geslacht");
+    window.filtered = undefined;
 }
 
 // update color

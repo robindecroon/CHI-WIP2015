@@ -1,6 +1,4 @@
-function HorizontalChart(divID, title, valueType) {
-
-    this.valueType = valueType;
+function HorizontalChart(divID, title) {
 
     this.nbBarsVariable = 15;
     this.gap = 0.5;
@@ -30,6 +28,8 @@ function HorizontalChart(divID, title, valueType) {
 
     this.upperLayer = this.internalChart.append("g")
         .attr("transform", translation(marginLeft, marginTop + this.titleOffset));
+
+    this.currentFilter;
 }
 
 HorizontalChart.prototype.createChart = function (data) {
@@ -38,11 +38,14 @@ HorizontalChart.prototype.createChart = function (data) {
 
     var nbBars = _this.nbBarsVariable;
 
-    //var valueByType = data.dimension(function(d) { return d[_this.valueType]});
-    console.log(data.top(Infinity));
     var valueCountByType = data.group();
-    console.log(valueCountByType.top(Infinity));
     var chartDict = valueCountByType.top(nbBars);
+    if (_this.currentFilter) {
+        chartDict = chartDict.filter(function (d) {
+            return d.key == _this.currentFilter;
+        });
+    }
+    ;
 
     nbBars = d3.min([nbBars, chartDict.length]);
     chartDict = chartDict.slice(0, nbBars);
@@ -119,25 +122,25 @@ HorizontalChart.prototype.createChart = function (data) {
         .attr("width", function (d) {
             return x(d.value);
         })
-        .attr("height", barHeight)
-        .style("fill", function (d) {
-            if (d.selected == true)
-                return "red"
-            else
-                return "steelblue"
-        });
+        .attr("height", barHeight);
+    //.style("fill", function (d) {
+    //    if (d.selected == true)
+    //        return "red"
+    //    else
+    //        return "steelblue"
+    //});
     bars.exit().remove();
 
     bars
         .on("click", function (d) {
-            //var filterData = $.grep(window.data, function (n, i) {
-            //    return n[_this.valueType] == d.key;
-            //});
-            chartDict.forEach(function (n) {
-                if (n[_this.valueType] == d.key)
-                    n.selected = true;
-            });
-            updateWidgets(filterData)
+            if (_this.currentFilter == undefined) {
+                _this.currentFilter = d.key;
+                data.filter(_this.currentFilter);
+            } else {
+                _this.currentFilter = undefined;
+                data.filter(null);
+            }
+            updateWidgets();
         });
 
     var textScores = _this.middleLayer.selectAll("text.barText")
