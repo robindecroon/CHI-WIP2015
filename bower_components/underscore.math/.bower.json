@@ -1,0 +1,14 @@
+{
+  "name": "underscore.math",
+  "homepage": "https://github.com/syntagmatic/underscore.math",
+  "_release": "cc29a2733b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cc29a2733b5cb34c5267fcf46d8dce86dce93a27"
+  },
+  "_source": "https://github.com/syntagmatic/underscore.math.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/syntagmatic/underscore.math.git",
+  "_direct": true
+}
