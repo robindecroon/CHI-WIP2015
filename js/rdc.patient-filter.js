@@ -5,7 +5,7 @@ var pcz;
 
 // color scale for zscores
 var zcolorscale = d3.scale.linear()
-    .domain([-2,-0.5,0.5,2])
+    .domain([-2, -0.5, 0.5, 2])
     .range(["#fc8d59", "#91cf60", "#91cf60", "#fc8d59"])
     .interpolate(d3.interpolateLab);
 
@@ -25,9 +25,50 @@ var g = new JustGage({
     title: "Visitors"
 });
 
+var nbDays = '#dagen sinds bezoek';
+var income = 'inkomen'
+var bloodHigh = 'systolische bloeddruk';
+var bloodLow = 'diastolische bloeddruk';
+var weight = 'gewicht';
+var sugar = 'glycemie';
+var age = 'leeftijd';
+
+var religion = 'religie';
+var icpc = 'icpc';
+var degree = 'diploma';
+var careGiver = 'hoofddokter';
+
+var myDimensions = [nbDays, income, bloodHigh, bloodLow, weight, sugar, age];
+var myQualitativeDimensions = [religion, icpc, degree, careGiver];
+
+var crossFilterDimensions = [];
+
 // load csv file and create the chart
-d3.csv('data/testdata.csv', function(data) {
+d3.csv('data/testdata.csv', function (data) {
+    var patients = crossfilter(data);
+
+
+    myDimensions.forEach(function (dim) {
+        var tempDim = patients.dimension(function (d) {
+            return +d[dim];
+        });
+        var temp = {key: dim, crossDim: tempDim};
+        crossFilterDimensions.push(temp);
+    });
+
+    myQualitativeDimensions.forEach(function (dim) {
+        var tempDim = patients.dimension(function (d) {
+            return d[dim];
+        });
+        var temp = {key: dim, crossDim: tempDim};
+        crossFilterDimensions.push(temp);
+    });
+
     updateWidgets(data);
+    drawParCoords(data);
+});
+
+function drawParCoords(data) {
     pcz = d3.parcoords()("#patient_filter")
         .data(data)
         .margin({
@@ -37,15 +78,15 @@ d3.csv('data/testdata.csv', function(data) {
             bottom: marginBottom
         })
         .render()
-        .dimensions(['#dagen sinds bezoek', 'inkomen', 'systolische bloeddruk', 'diastolische bloeddruk', 'gewicht', 'glycemie', 'leeftijd'])
+        .dimensions(myDimensions)
         .render()
         .createAxes()
         .alpha(0.9)
         .reorderable()
         .shadows()
         .brushMode("1D-axes")  // enable brushing
-        .on("brush", function(items) {
-            updateWidgets(items)
+        .on("brush", function (items) {
+            updateWidgets(items);
         });
 
     change_color("systolische bloeddruk");
@@ -55,34 +96,73 @@ d3.csv('data/testdata.csv', function(data) {
         .on("click", change_color)
         .selectAll(".label")
         .style("font-size", "14px");
+}
 
-});
 
 function updateWidgets(items) {
-    var crossData = crossfilter(items)
-    window.data = crossData;
-    createHeatmap(items);
-    genderAgeChart.prepareData(items, "leeftijd", "geslacht");
-    icpcChart.createChart(items);
-    religionChart.createChart(items);
-    degreeChart.createChart(items);
-    physicianChart.createChart(items);
+    var filtered = window.filtered;
+    if (filtered) {
+        crossFilterDimensions.forEach(function (dimension) {
+            var found = false;
+            var low;
+            var high;
+            filtered.forEach(function (f) {
+                if (f.dimension == dimension.key) {
+                    found = true;
+                    low = f.lower;
+                    high = f.high;
+                }
+            });
+            if (found) {
+                dimension.crossDim.filter([low, high])
+            } else {
+                dimension.crossDim.filter(null);
+            }
+
+        });
+    }
+
+    // create the charts
+    for (var i = 0; i < crossFilterDimensions.length; i++) {
+        var crossDimension = crossFilterDimensions[i].crossDim;
+        switch (crossFilterDimensions[i].key) {
+            case icpc:
+                icpcChart.createChart(crossDimension);
+                break;
+            case religion:
+                religionChart.createChart(crossDimension);
+                break;
+            case degree:
+                degreeChart.createChart(crossDimension);
+                break;
+            case careGiver:
+                physicianChart.createChart(crossDimension);
+                break;
+        }
+    }
+    var filteredData = crossFilterDimensions[0].crossDim.top(Infinity);
+    createHeatmap(filteredData);
+    genderAgeChart.prepareData(filteredData, "leeftijd", "geslacht");
 }
 
 // update color
 function change_color(dimension) {
     pcz.svg.selectAll(".dimension")
         .style("font-weight", "normal")
-        .filter(function(d) { return d == dimension; })
+        .filter(function (d) {
+            return d == dimension;
+        })
         .style("font-weight", "bold");
 
-    pcz.color(zcolor(pcz.data(),dimension)).render()
+    pcz.color(zcolor(pcz.data(), dimension)).render()
 }
 
 // return color function based on plot and dimension
 function zcolor(col, dimension) {
     var z = zscore(_(col).pluck(dimension).map(parseFloat));
-    return function(d) { return zcolorscale(z(d[dimension])) }
+    return function (d) {
+        return zcolorscale(z(d[dimension]))
+    }
 }
 
 // color by zscore
@@ -90,7 +170,7 @@ function zscore(col) {
     var n = col.length,
         mean = _(col).mean(),
         sigma = _(col).stdDeviation();
-    return function(d) {
-        return (d-mean)/sigma;
+    return function (d) {
+        return (d - mean) / sigma;
     };
 }

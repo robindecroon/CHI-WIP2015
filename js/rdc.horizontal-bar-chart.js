@@ -38,31 +38,12 @@ HorizontalChart.prototype.createChart = function (data) {
 
     var nbBars = _this.nbBarsVariable;
 
-    var sortedData = data.sort(function (a, b) {
-        return a[_this.valueType].localeCompare(b[_this.valueType]);
-    });
+    //var valueByType = data.dimension(function(d) { return d[_this.valueType]});
+    console.log(data.top(Infinity));
+    var valueCountByType = data.group();
+    console.log(valueCountByType.top(Infinity));
+    var chartDict = valueCountByType.top(nbBars);
 
-    var a = [], b = [], prev;
-    for (var i = 0; i < data.length; i++) {
-        if (sortedData[i][_this.valueType] !== prev) {
-            a.push(sortedData[i][_this.valueType]);
-            b.push(1);
-        } else {
-            b[b.length - 1]++;
-        }
-        prev = sortedData[i][_this.valueType];
-    }
-    var chartDict = [];
-    for (var i = 0; i < a.length; i++) {
-        chartDict.push({
-            key: a[i],
-            value: +b[i]
-        });
-    }
-
-    chartDict.sort(function (a, b) {
-        return b.value - a.value;
-    });
     nbBars = d3.min([nbBars, chartDict.length]);
     chartDict = chartDict.slice(0, nbBars);
 
