@@ -1,5 +1,5 @@
-var nbWidgetsHorizontal = 2;
-var nbWidgetsVertical = 3;
+var nbWidgetsHorizontal = 3;
+var nbWidgetsVertical = 4;
 
 var gridMargin = 20;
 
@@ -9,8 +9,8 @@ var marginBottom = 30;
 var marginLeft = 30;
 var marginMiddle = 22;
 
-widgetWidth = window.innerWidth / nbWidgetsHorizontal - nbWidgetsHorizontal * gridMargin;
-widgetHeight = window.innerHeight / nbWidgetsVertical - nbWidgetsHorizontal * gridMargin;
+widgetWidth = window.innerWidth / nbWidgetsHorizontal - 1.5 * gridMargin;
+widgetHeight = window.innerHeight / nbWidgetsVertical - 1.5 * gridMargin;
 
 $(function () { //DOM Ready
 

@@ -1,8 +1,8 @@
 function HorizontalChart(divID, title) {
 
-    this.nbBarsVariable = 15;
+    this.nbBarsVariable = 10;
     this.gap = 0.5;
-    this.left_width = 150;
+    this.left_width = 75;
     this.titleOffset = 15;
 
     this.width = widgetWidth - marginLeft - marginRight;
@@ -107,7 +107,7 @@ HorizontalChart.prototype.createChart = function (crossfilterDimension) {
         .attr("text-anchor", "left")
         .text(function (d) {
             var text = d.key;
-            return text.slice(0, 30);
+            return text.slice(0, 15);
         });
     textNames.exit().remove();
 
