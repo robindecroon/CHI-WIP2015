@@ -1,8 +1,11 @@
-function DoubleHorizontalBarChart(divID, title) {
+function DoubleHorizontalBarChart(divID, title, var1, var2) {
 
     this.gap = 0.5;
     this.tickSize = 5;
     this.titleOffset = 15;
+
+    this.var1 = var1;
+    this.var2 = var2;
 
     this.width = widgetWidth - marginLeft - marginRight;
     this.height = widgetHeight - marginTop - marginBottom;
@@ -40,8 +43,8 @@ function DoubleHorizontalBarChart(divID, title) {
     this.currentRightFilter;
 }
 
-DoubleHorizontalBarChart.prototype.prepareData = function (data, var1, var2) {
-//DoubleHorizontalBarChart.prototype.prepareData = function (ageDimension, genderDimension) {
+//DoubleHorizontalBarChart.prototype.prepareData = function (data, var1, var2) {
+DoubleHorizontalBarChart.prototype.prepareData = function (ageDimension, genderDimension) {
 
     // age en gender filter toevoegen
 
@@ -69,9 +72,11 @@ DoubleHorizontalBarChart.prototype.prepareData = function (data, var1, var2) {
         .attr("text-anchor", "middle")
         .text(String);
 
+    var data = ageDimension.top(Infinity);
+
     data.forEach(function (patient) {
-        var groupID = Math.floor(patient[var1] / 10);
-        if (patient[var2] == 'male') {
+        var groupID = Math.floor(patient[_this.var1] / 10);
+        if (patient[_this.var2] == 'male') {
             groups[groupID].male++;
         } else {
             groups[groupID].female++;
@@ -166,11 +171,13 @@ DoubleHorizontalBarChart.prototype.prepareData = function (data, var1, var2) {
 
     leftBars.on("click", function (d) {
         if (_this.currentLeftFilter == undefined) {
-            _this.currentLeftFilter = d.key;
-            data.filter(_this.currentLeftFilter);
+            _this.currentLeftFilter = d.group.split("-");
+            ageDimension.filter(_this.currentLeftFilter);
+            genderDimension.filter("male");
         } else {
             _this.currentLeftFilter = undefined;
-            data.filter(null);
+            ageDimension.filter(null);
+            genderDimension.filter(null);
         }
         updateWidgets();
     });
@@ -198,11 +205,13 @@ DoubleHorizontalBarChart.prototype.prepareData = function (data, var1, var2) {
 
     rightBars.on("click", function (d) {
         if (_this.currentRightFilter == undefined) {
-            _this.currentRightFilter = d.key;
-            data.filter(_this.currentRightFilter);
+            _this.currentRightFilter = d.group.split("-");
+            ageDimension.filter(_this.currentRightFilter);
+            genderDimension.filter("female");
         } else {
             _this.currentRightFilter = undefined;
-            data.filter(null);
+            ageDimension.filter(null);
+            genderDimension.filter(null);
         }
         updateWidgets();
     });

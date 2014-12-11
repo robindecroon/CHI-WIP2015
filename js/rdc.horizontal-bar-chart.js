@@ -32,13 +32,13 @@ function HorizontalChart(divID, title) {
     this.currentFilter;
 }
 
-HorizontalChart.prototype.createChart = function (data) {
+HorizontalChart.prototype.createChart = function (crossfilterDimension) {
 
     var _this = this;
 
     var nbBars = _this.nbBarsVariable;
 
-    var valueCountByType = data.group();
+    var valueCountByType = crossfilterDimension.group();
     var chartDict = valueCountByType.top(nbBars);
     if (_this.currentFilter) {
         chartDict = chartDict.filter(function (d) {
@@ -139,10 +139,10 @@ HorizontalChart.prototype.createChart = function (data) {
         .on("click", function (d) {
             if (_this.currentFilter == undefined) {
                 _this.currentFilter = d.key;
-                data.filter(_this.currentFilter);
+                crossfilterDimension.filter(_this.currentFilter);
             } else {
                 _this.currentFilter = undefined;
-                data.filter(null);
+                crossfilterDimension.filter(null);
             }
             updateWidgets();
         });

@@ -11,7 +11,7 @@ var zcolorscale = d3.scale.linear()
 
 
 var icpcChart = new HorizontalChart("#icpc", "Meest voorkomende aandoeningen");
-var genderAgeChart = new DoubleHorizontalBarChart("#genderpopulation", "Bevolkingspiramide");
+var genderAgeChart = new DoubleHorizontalBarChart("#genderpopulation", "Bevolkingspiramide", "leeftijd", "geslacht");
 var religionChart = new HorizontalChart("#religion", "Religie");
 var degreeChart = new HorizontalChart("#degree", "Hoogste diploma");
 var physicianChart = new HorizontalChart("#physician", "Hoofdverzorger");
@@ -144,15 +144,15 @@ function updateWidgets() {
             case careGiver:
                 physicianChart.createChart(crossDimension);
                 break;
-            //case age:
-            //    genderAgeChart.prepareData(crossDimension, patientsByGender);
+            case age:
+                genderAgeChart.prepareData(crossDimension, patientsByGender);
 
 
         }
     }
     var filteredData = crossFilterDimensions[0].crossDim.top(Infinity);
     createHeatmap(filteredData);
-    genderAgeChart.prepareData(filteredData, "leeftijd", "geslacht");
+    //genderAgeChart.prepareData(filteredData, "leeftijd", "geslacht");
     window.filtered = undefined;
 }
 
