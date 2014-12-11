@@ -15,6 +15,7 @@ var genderAgeChart = new DoubleHorizontalBarChart("#genderpopulation", "Bevolkin
 var religionChart = new HorizontalChart("#religion", "Religie");
 var degreeChart = new HorizontalChart("#degree", "Hoogste diploma");
 var physicianChart = new HorizontalChart("#physician", "Hoofdverzorger");
+var patientsTable = new SelectedTable("#patients", "Geselecteerde patienten");
 //var marriedGauge =  new Gauge("#gauge", 67, 0, 100, "Getrouwd");
 
 var g = new JustGage({
@@ -95,11 +96,11 @@ function drawParCoords(data) {
             updateWidgets(items);
         });
 
-    change_color("systolische bloeddruk");
+    //change_color("systolische bloeddruk");
 
     // click label to activate coloring
     pcz.svg.selectAll(".dimension")
-        .on("click", change_color)
+        //.on("click", change_color)
         .selectAll(".label")
         .style("font-size", "14px");
 }
@@ -152,7 +153,7 @@ function updateWidgets() {
     }
     var filteredData = crossFilterDimensions[0].crossDim.top(Infinity);
     createHeatmap(filteredData);
-    //genderAgeChart.prepareData(filteredData, "leeftijd", "geslacht");
+    patientsTable.update(filteredData, ["name", icpc, gender, age, degree, careGiver]);
     window.filtered = undefined;
 }
 

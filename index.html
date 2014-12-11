@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 
+<link rel="stylesheet" type="text/css" href="bower_components/lightview/css/lightview/lightview.css"/>
+
 <link rel="stylesheet" href="bower_components/parallel-coordinates/d3.parcoords.css">
 
 <link rel="stylesheet" href="css/rdc.chiwipstyle.css">
@@ -39,7 +41,7 @@
         </li>
 
         <li data-row="4" data-col="1" data-sizex="3" data-sizey="1">
-            <div id="patients" class="gridelement"></div>
+            <div id="patients" class="gridelement" style="overflow-y:auto;"></div>
         </li>
 
         <!--<li data-row="5" data-col="1" data-sizex="1" data-sizey="1">-->
@@ -48,6 +50,13 @@
 
     </ul>
 </div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+<script src="bower_components/lightview/js/excanvas/excanvas.js"></script>
+<script src="bower_components/lightview/js/spinners/spinners.min.js"></script>
+<script src="bower_components/lightview/js/lightview/lightview.js"></script>
+
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -70,6 +79,7 @@
 
 <script src="js/rdc.main.js"></script>
 
+<script src="js/rdc.selected-table.js"></script>
 <script src="js/rdc.patient-demographics.js"></script>
 <script src="js/rdc.double-horizontal-bar-chart.js"></script>
 <script src="js/rdc.heatmap.js"></script>

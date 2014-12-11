@@ -1,100 +1,95 @@
-name,selected,hoofddokter,cholesterol,diploma,religie,inkomen,#sigaretten,alcohol,systolische bloeddruk,diastolische bloeddruk,gewicht,glycemie,leeftijd,lat,lng,geslacht,icpc,count,#dagen sinds bezoek
-Adam Furches,false,Evan Ogilvie,109,lager secundair,Moslim,2084.66401658,0,0,165,79,120,147,75,50.8857123149,4.88494887303,male,Kanker,1,13
-Edwin Mitchell,false,Gerald Charity,185,secundair,Katholiek,1635.12688362,0,1,130,66,61,93,27,50.9909409145,4.09532219463,male,Reumatoide artritis,1,28
-Frederick Schumacher,false,Jeanne Valletta,184,secundair,Orhodox,3645.75719798,0,3,127,90,137,77,109,50.916424702,4.53361611776,male,Migraine,1,57
-Gregory Crowell,false,Evan Ogilvie,185,universitair,Katholiek,2379.83283623,0,5,122,61,52,149,5,50.8707620014,4.71224878574,male,Migraine,1,72
-Sheri Houston,false,Jeanne Valletta,162,universitair,Joods,2957.16651616,0,2,125,92,30,153,26,50.7324417817,3.93033906322,female,Dementie (inclusief alzheimer),1,61
-Hector Ross,false,Deb Schroder,137,hoger onderwijs (lang),Katholiek,2287.23353935,12,2,145,40,31,141,62,50.9958264493,4.72191560625,male,Gezichtsstoornissen,1,100
-John Heard,false,Cathern Dagenhart,114,hoger onderwijs (lang),Katholiek,4700.5408901,0,0,127,40,34,144,105,50.9924977644,3.89505299247,male,Aandoeningen van het endocard/hartklepafwijkingen,1,54
-Virginia Akers,false,Milly Slusser,183,secundair,Moslim,1605.91744566,17,1,110,71,66,122,17,50.7381531423,4.3313610976,female,Hartfalen,1,12
-Amber Dax,false,Evan Ogilvie,113,hoger onderwijs (kort),Moslim,1663.59067809,6,4,126,74,69,94,100,50.7126068199,5.12348042305,female,Aids en hiv-infectie,1,68
-Eric Patterson,false,Cathern Dagenhart,207,hoger onderwijs (lang),Prostestants,2418.55863866,0,2,181,60,111,95,33,50.8823110691,4.99129229547,male,Aangeboren afwijkingen van het hartvaatstelsel,1,58
-Kenneth Broussard,false,Ninfa Mandeville,178,secundair,Orhodox,2978.74140806,18,0,183,58,34,157,92,50.8096919123,4.29519552761,male,Chronische nek- en rugklachten,1,71
-William Williams,false,Cathern Dagenhart,95,secundair,Prostestants,1099.79014399,0,2,157,53,127,75,67,50.8869489765,4.52137066317,male,Aandoeningen gerelateerd aan alcohol,1,43
-Robert Luthy,false,Jeanne Valletta,157,universitair,Prostestants,3748.75846211,11,0,153,86,140,153,71,50.9808095249,4.52123104102,male,Schizofrenie,1,68
-Mary Martin,false,Milly Slusser,140,hoger onderwijs (kort),Anglicaans,4800.38788971,0,3,121,97,70,93,36,50.6888767117,3.9830601934,female,Dementie (inclusief alzheimer),1,68
-Michael Rood,false,Gerald Charity,144,lager secundair,Joods,1436.58561145,0,2,118,54,111,141,90,50.830381852,4.58602336086,male,Coronaire hartziekten,1,32
-Carolyn Brown,false,Bennett Hannaman,112,secundair,Orhodox,3584.02090592,9,2,142,81,117,147,10,50.9495858787,4.69896808599,female,Aids en hiv-infectie,1,81
-Joseph Lucas,false,Wilma Popham,98,secundair,Prostestants,1168.59263691,14,5,180,62,104,103,4,50.787586095,4.65887279439,male,Dementie (inclusief alzheimer),1,23
-Paul Carter,false,Cathern Dagenhart,154,hoger onderwijs (kort),Orhodox,2023.46046555,0,2,107,95,149,55,86,50.7619828126,4.92698628993,male,Gezichtsstoornissen,1,34
-Michael Whitley,false,Jeanne Valletta,98,universitair,Prostestants,2537.80215868,16,4,160,88,58,107,34,51.0055521755,4.71114268803,male,Verstandelijke handicap,1,86
-Harold Quintana,false,Deb Schroder,135,lager secundair,Joods,2247.08627573,0,4,179,57,75,155,66,50.8995398288,5.16519700325,male,Ziekte van Parkinson,1,31
-Ronnie Alexander,false,Deb Schroder,124,lager secundair,Moslim,4352.39689042,15,1,188,99,93,154,91,50.7194486651,4.16530840084,male,Gezichtsstoornissen,1,93
-Mildred Plunkett,false,Bennett Hannaman,200,lager secundair,Joods,4594.74763869,0,4,187,80,91,108,49,50.9451041883,4.85447128702,female,Aandoeningen van het endocard/hartklepafwijkingen,1,63
-William Hatcher,false,Gerald Charity,114,hoger onderwijs (kort),Anglicaans,2598.91790705,0,5,172,74,143,142,56,50.9347285616,4.5908271791,male,Aandoeningen gerelateerd aan alcohol,1,74
-Frank Costanza,false,Jeanne Valletta,203,lager secundair,Joods,3729.19388342,0,1,177,65,126,125,95,50.7683988031,4.71971032571,male,Gezichtsstoornissen,1,44
-Michael Strunk,false,Gerald Charity,95,hoger onderwijs (lang),Anglicaans,4884.34975531,0,2,149,49,75,138,14,50.7367898662,4.94150177315,male,Aids en hiv-infectie,1,72
-Mona Forcier,false,Caterina Quiroz,107,secundair,Joods,4307.95681813,19,5,162,92,109,118,19,50.7082457355,4.97623338206,female,Hartfalen,1,14
-Damon Chu,false,Wilma Popham,177,hoger onderwijs (kort),Anglicaans,1201.49733458,0,2,142,87,118,134,17,51.0390419891,4.41966288447,male,Schizofrenie,1,87
-John Saunders,false,Deb Schroder,177,universitair,Orhodox,3072.49861572,9,4,122,80,134,154,1,50.7128256868,4.85608016891,male,Hartritmestoornissen,1,67
-Claudia Calcote,false,Evan Ogilvie,167,secundair,Vrijzinnig,2875.17304255,2,1,112,74,55,111,39,50.9334576171,5.05758040918,female,Hartritmestoornissen,1,61
-Bennie Mears,false,Bennett Hannaman,203,lager secundair,Joods,3210.27382848,0,3,74,95,82,70,93,50.7100088034,4.70371666437,male,Gezichtsstoornissen,1,57
-Melissa Bender,false,Caterina Quiroz,176,hoger onderwijs (kort),Anglicaans,1297.50722211,0,0,188,80,91,107,14,51.028669633,4.70211228569,female,Persoonlijkheidsstoornissen,1,89
-Roberto Combs,false,Milly Slusser,128,hoger onderwijs (kort),Orhodox,4349.359385,4,1,129,89,59,106,62,50.9830250912,4.72358816069,male,Beroerte,1,64
-John Miller,false,Gerald Charity,167,hoger onderwijs (kort),Joods,3423.46267731,0,2,107,89,92,131,9,50.9650373836,4.88829797969,male,Aids en hiv-infectie,1,93
-Luke Leach,false,Wilma Popham,154,hoger onderwijs (kort),Moslim,4661.95495407,17,3,83,71,114,62,83,50.8374726338,4.07649230832,male,Dementie (inclusief alzheimer),1,14
-Catherine Anderson,false,Cathern Dagenhart,194,lager secundair,Joods,4564.24904768,0,4,153,70,113,138,7,50.7458194296,4.43063189027,female,Stemmingsstoornissen,1,82
-Abby Baker,false,Cathern Dagenhart,103,hoger onderwijs (lang),Orhodox,1080.01187013,0,0,110,40,103,50,26,50.7323366778,4.75486535139,female,Hartritmestoornissen,1,95
-Bryce Brown,false,Bennett Hannaman,121,lager secundair,Vrijzinnig,1623.25161798,0,2,141,46,90,92,55,50.7495804675,5.10276437106,male,Aandoeningen van het endocard/hartklepafwijkingen,1,75
-Keith Beachy,false,Deb Schroder,106,hoger onderwijs (kort),Orhodox,1997.09479343,1,3,74,63,84,57,99,50.7578586755,4.29936890013,male,Reumatoide artritis,1,9
-Jamie Fonua,false,Caterina Quiroz,209,hoger onderwijs (kort),Joods,3567.27093441,0,5,101,60,110,145,21,50.9574332733,3.98986574159,female,Reumatoide artritis,1,87
-Brenda Guild,false,Evan Ogilvie,123,lager secundair,Joods,2620.36331612,0,5,86,60,106,71,61,50.9164241815,4.03756259726,female,Chronische nek- en rugklachten,1,38
-Doyle Reeve,false,Bennett Hannaman,207,hoger onderwijs (lang),Orhodox,4984.07981657,0,3,121,59,38,59,15,50.7925016237,4.09202871081,male,Migraine,1,83
-Jessica Soto,false,Bennett Hannaman,133,universitair,Anglicaans,4993.79329344,15,3,95,61,122,61,87,50.9123833971,4.00264603734,female,Kanker,1,20
-Bert Goodell,false,Caterina Quiroz,157,lager secundair,Vrijzinnig,4555.99152156,15,1,128,90,23,124,33,50.7051083399,4.47488414929,male,Osteoporose,1,70
-Rodney Johnson,false,Bennett Hannaman,210,hoger onderwijs (lang),Moslim,3434.27903863,0,0,111,100,32,145,56,51.0232035053,4.51123973704,male,Persoonlijkheidsstoornissen,1,40
-Joseph Conteras,false,Milly Slusser,195,secundair,Moslim,2933.37044154,6,2,187,73,36,134,5,50.7406860621,4.54239611343,male,Hartritmestoornissen,1,72
-William Christian,false,Wilma Popham,128,secundair,Anglicaans,3005.13405367,9,0,168,92,124,123,78,50.8946116184,4.29456352091,male,Aangeboren afwijkingen van het hartvaatstelsel,1,88
-Dorothy Vinion,false,Milly Slusser,136,universitair,Joods,4447.01394223,0,3,154,76,69,95,16,50.8582401229,4.04406033188,female,Diabetes mellitus,1,34
-Lane Law,false,Gerald Charity,119,hoger onderwijs (kort),Orhodox,4666.48917083,7,0,102,57,83,123,40,50.9115349333,4.08131334053,male,Overspanning/burn-out,1,72
-Cynthia Mathias,false,Deb Schroder,153,lager secundair,Orhodox,2756.431289,17,3,70,68,105,97,22,50.9615986789,4.63757492085,female,Epilepsie,1,62
-Jesse Thomas,false,Wilma Popham,127,lager secundair,Prostestants,3279.8912409,14,0,162,83,127,88,68,50.9063046486,4.72000975641,male,Reumatoide artritis,1,44
-Dale Kurland,false,Evan Ogilvie,92,lager secundair,Prostestants,4115.28459801,7,3,121,87,45,66,44,50.7400638822,4.62238890382,male,Beroerte,1,95
-Miguel Soehl,false,Caterina Quiroz,122,lager secundair,Orhodox,2804.17770573,0,2,169,63,48,82,31,50.7469414782,4.05945153853,male,Osteoporose,1,83
-Timothy Quinn,false,Milly Slusser,195,lager secundair,Anglicaans,3713.04282183,0,2,119,95,39,55,101,50.7909631425,5.15228483644,male,Diabetes mellitus,1,50
-William Boone,false,Cathern Dagenhart,95,hoger onderwijs (kort),Joods,3503.38373163,0,2,126,92,115,101,33,50.9870690968,4.62805674092,male,Schizofrenie,1,59
-John Whipple,false,Wilma Popham,106,secundair,Moslim,4997.80659146,0,2,74,44,136,68,10,50.8351509073,4.2895172687,male,Diabetes mellitus,1,50
-Edra Martin,false,Deb Schroder,180,universitair,Anglicaans,2105.65925244,20,3,180,59,68,87,15,50.9331612942,4.02289219161,female,Beroerte,1,21
-Margaret Ruiz,false,Ninfa Mandeville,127,hoger onderwijs (lang),Prostestants,3152.40243985,8,2,138,68,43,157,91,50.881433923,4.19834345337,female,Perifere artrose,1,57
-James Leonard,false,Deb Schroder,120,universitair,Vrijzinnig,2201.04796076,16,0,178,47,106,90,53,50.910485186,4.90361043365,male,Gehoorstoornissen,1,96
-Dorian Barnes,false,Jeanne Valletta,116,universitair,Prostestants,4208.72073979,4,3,151,55,120,139,16,51.0152536517,5.07298493618,female,Overspanning/burn-out,1,3
-Rubin Lowry,false,Ninfa Mandeville,173,hoger onderwijs (lang),Vrijzinnig,3514.57637636,0,3,153,84,132,105,66,50.8762692611,4.95731603975,male,Persoonlijkheidsstoornissen,1,70
-Jeanie Davis,false,Deb Schroder,141,secundair,Moslim,1836.53999347,0,1,100,85,91,146,94,50.793952146,4.50103588385,female,Reumatoide artritis,1,7
-Melissa Levesque,false,Deb Schroder,132,hoger onderwijs (lang),Anglicaans,4154.01141534,0,0,82,98,141,160,42,50.8548506601,4.67325668806,female,Reumatoide artritis,1,86
-Ronald Foster,false,Jeanne Valletta,152,hoger onderwijs (lang),Orhodox,1362.27145934,12,4,78,66,21,97,107,50.8090056654,4.47996233394,male,Schizofrenie,1,82
-Lori Brustmann,false,Gerald Charity,115,lager secundair,Moslim,3717.36531014,4,1,150,74,88,63,87,50.9602914797,4.87894856664,female,Persoonlijkheidsstoornissen,1,59
-Austin Arcement,false,Wilma Popham,112,hoger onderwijs (kort),Joods,2631.50124381,8,3,105,53,90,115,12,50.9691490703,4.64305214995,male,Aids en hiv-infectie,1,34
-Robert Walker,false,Evan Ogilvie,170,universitair,Vrijzinnig,4687.10387255,7,4,184,45,44,67,54,50.9532886164,5.07452768469,male,Stemmingsstoornissen,1,27
-John Carlone,false,Bennett Hannaman,134,secundair,Moslim,3068.4946746,0,1,86,53,74,120,75,50.7262231152,4.04674749333,male,Diabetes mellitus,1,16
-Eric Brunson,false,Deb Schroder,143,universitair,Orhodox,1661.76800076,0,0,189,78,94,149,80,50.8156134428,4.44152759315,male,Gezichtsstoornissen,1,85
-Mary Garcia,false,Wilma Popham,116,hoger onderwijs (lang),Orhodox,4796.57188474,20,4,118,47,69,63,27,50.9231105855,4.22262666113,female,Hartfalen,1,27
-Constance Causey,false,Caterina Quiroz,187,universitair,Vrijzinnig,2853.44711452,0,5,170,45,58,54,53,50.9762856703,4.02166293783,female,Angststoornissen,1,25
-Gayle Stephens,false,Milly Slusser,202,hoger onderwijs (lang),Katholiek,4731.09675594,0,2,117,79,115,59,13,50.7381416946,3.91610682993,female,Dementie (inclusief alzheimer),1,52
-Joey Gilbert,false,Deb Schroder,175,hoger onderwijs (kort),Vrijzinnig,1822.03780215,13,5,128,91,86,62,42,50.805051969,4.40121892426,female,Aids en hiv-infectie,1,76
-Clarence Davis,false,Jeanne Valletta,172,lager secundair,Joods,2854.25877463,14,3,176,79,47,95,73,50.7345278078,4.25342077242,male,Astma,1,63
-Edmund Privateer,false,Wilma Popham,157,universitair,Joods,1579.04005689,0,2,165,83,149,157,88,50.792146385,3.95980867562,male,Aids en hiv-infectie,1,47
-Jennifer Threlkeld,false,Jeanne Valletta,186,lager secundair,Vrijzinnig,1602.74972734,1,5,166,58,118,69,3,50.7838391723,4.24588391305,female,Aids en hiv-infectie,1,54
-Dorothy Eanes,false,Deb Schroder,99,universitair,Orhodox,4483.12741697,0,1,118,86,71,71,101,50.9539121729,3.94185452651,female,Kanker,1,30
-Howard Shaw,false,Caterina Quiroz,92,universitair,Joods,4124.91569584,20,0,170,79,35,138,42,50.7032939729,4.62949687671,male,Osteoporose,1,39
-Paul Miramontes,false,Gerald Charity,201,lager secundair,Vrijzinnig,1694.51438128,17,2,136,43,142,142,12,51.0376935605,4.16656663123,male,Chronische nek- en rugklachten,1,13
-Ashley Flores,false,Deb Schroder,120,hoger onderwijs (kort),Joods,1374.89209476,13,2,109,69,52,135,24,50.9175979933,4.49759772045,female,Diabetes mellitus,1,69
-Jeffrey Fulenwider,false,Milly Slusser,181,lager secundair,Anglicaans,3744.0946494,0,0,147,97,84,129,20,50.7603820434,5.08634680572,male,Dementie (inclusief alzheimer),1,9
-James Callaghan,false,Gerald Charity,122,hoger onderwijs (kort),Katholiek,2490.73641934,0,5,97,52,92,154,91,50.9302542471,5.13545078879,male,Perifere artrose,1,65
-Mark Sadler,false,Ninfa Mandeville,208,hoger onderwijs (kort),Prostestants,3763.68534033,6,0,94,50,35,89,25,50.7767077621,4.89038800961,male,Epilepsie,1,88
-John Hernandez,false,Caterina Quiroz,158,secundair,Moslim,1373.89477101,0,0,169,57,22,120,82,50.915746349,4.71602182705,male,Diabetes mellitus,1,60
-Karen Smith,false,Deb Schroder,101,secundair,Anglicaans,4677.01522588,18,2,114,54,93,134,19,50.7622319372,4.95440671997,female,Angststoornissen,1,79
-James Burroughs,false,Gerald Charity,145,lager secundair,Katholiek,2912.29772186,0,5,70,97,132,132,69,50.9895913789,4.1316520792,male,Aids en hiv-infectie,1,42
-Annie Gibson,false,Ninfa Mandeville,135,lager secundair,Vrijzinnig,2322.38393793,0,4,97,43,139,52,17,50.8435644534,4.72852370963,female,Astma,1,15
-Michael Dyer,false,Bennett Hannaman,92,secundair,Katholiek,1858.41053362,19,3,81,63,117,149,57,50.7816287699,4.23553355203,male,Migraine,1,39
-Avis Roberts,false,Wilma Popham,203,lager secundair,Joods,1588.30363872,0,0,140,97,136,135,2,50.8699109925,4.54207001202,female,Epilepsie,1,68
-Christopher Denger,false,Ninfa Mandeville,93,secundair,Katholiek,1834.0710907,8,4,188,98,112,123,70,50.7466601267,3.92895498855,male,Hartritmestoornissen,1,66
-Carol Shannon,false,Cathern Dagenhart,136,hoger onderwijs (lang),Moslim,1298.5677384,0,5,133,56,130,104,81,50.741938318,4.51922884731,female,Kanker,1,89
-Allan Hendrickson,false,Gerald Charity,128,hoger onderwijs (kort),Katholiek,3965.70645895,0,1,139,67,105,95,107,50.9308503803,4.00650262784,male,Chronische nek- en rugklachten,1,58
-Florence Bathke,false,Milly Slusser,94,universitair,Prostestants,4570.5610193,11,4,155,47,137,105,66,50.913853472,4.9338926033,female,Coronaire hartziekten,1,38
-Dorothy Washington,false,Gerald Charity,182,universitair,Vrijzinnig,4214.88880372,16,1,188,72,132,78,22,51.0039837925,4.26876163501,female,Beroerte,1,6
-Vicky Ferraro,false,Ninfa Mandeville,110,hoger onderwijs (lang),Prostestants,3070.29648489,13,0,156,98,23,131,25,50.7420504894,5.15545563068,female,Aandoeningen gerelateerd aan alcohol,1,56
-Steven Rotella,false,Cathern Dagenhart,180,universitair,Vrijzinnig,2168.05974255,7,4,179,72,36,107,79,50.6933217059,3.99620791991,male,Migraine,1,4
-Erma Spencer,false,Cathern Dagenhart,193,hoger onderwijs (lang),Joods,2360.121985,0,1,132,92,43,111,41,51.0463403071,4.75720277803,female,Reumatoide artritis,1,29
-Bessie Ovit,false,Evan Ogilvie,142,hoger onderwijs (lang),Anglicaans,3101.34906005,0,5,110,73,64,134,14,50.8467494292,4.31998220948,female,Angststoornissen,1,67
-John Ammons,false,Wilma Popham,206,secundair,Orhodox,1114.53705953,0,4,114,66,60,136,72,50.8619476432,4.68967819404,male,Beroerte,1,8
-Betty Sittloh,false,Milly Slusser,156,secundair,Moslim,1106.90429728,0,4,94,98,118,84,13,51.0123470248,4.37320852106,female,Verstandelijke handicap,1,65
+name,id,foto,selected,hoofddokter,cholesterol,diploma,religie,inkomen,#sigaretten,alcohol,systolische bloeddruk,diastolische bloeddruk,gewicht,glycemie,leeftijd,lat,lng,geslacht,icpc,count,#dagen sinds bezoek
+Becky Martinez,0,null,false,Bennett Hannaman,129,hoger onderwijs (kort),Vrijzinnig,4760.95954565,6,5,146,85,94,88,58,51.0436994225,3.89552227256,female,Overspanning/burn-out,1,68
+William Eaton,1,null,false,Gerald Charity,159,universitair,Anglicaans,1255.01217974,0,5,151,53,90,62,93,50.9396936925,4.99876807164,male,Dementie (inclusief alzheimer),1,38
+Grace Mihaly,2,null,false,Jeanne Valletta,105,universitair,Orhodox,4125.38897039,0,3,91,40,130,134,35,50.7750042265,4.56986646964,female,Aandoeningen van het endocard/hartklepafwijkingen,1,53
+Alice Cromwell,3,null,false,Jeanne Valletta,103,hoger onderwijs (kort),Anglicaans,2601.96932709,0,2,93,95,73,116,24,50.7407546806,5.06885270729,female,Verstandelijke handicap,1,70
+Mark Newberry,4,null,false,Bennett Hannaman,122,secundair,Prostestants,4622.34028668,0,2,94,98,99,95,48,51.004846231,4.58761771994,male,Schizofrenie,1,60
+Amber Tyler,5,null,false,Cathern Dagenhart,180,lager secundair,Prostestants,1360.44552765,0,4,156,50,143,76,104,50.7749423285,4.30011642444,female,Stemmingsstoornissen,1,59
+Jacquie Poisson,6,null,false,Gerald Charity,158,universitair,Anglicaans,3280.42935553,16,5,81,72,43,102,43,50.968891153,4.6303463905,female,Perifere artrose,1,81
+Robert Brown,7,null,false,Caterina Quiroz,172,hoger onderwijs (lang),Katholiek,4687.89319382,14,0,140,63,130,53,71,50.8554257912,5.0955067872,male,Stemmingsstoornissen,1,74
+Thomas Adams,8,null,false,Gerald Charity,210,lager secundair,Katholiek,2872.3708385,0,4,99,100,144,51,92,50.7779303841,4.63035534185,male,Reumatoide artritis,1,7
+Kimberly Bloomgren,9,null,false,Ninfa Mandeville,95,hoger onderwijs (lang),Vrijzinnig,2551.66495931,0,4,130,52,85,61,40,50.9271162948,5.03088167803,female,Epilepsie,1,29
+Janis Larson,10,null,false,Bennett Hannaman,154,lager secundair,Vrijzinnig,3616.23758572,0,2,102,73,26,123,61,50.7547973975,4.45310284349,female,Aandoeningen gerelateerd aan alcohol,1,48
+Brian Thompson,11,null,false,Ninfa Mandeville,123,hoger onderwijs (lang),Joods,4825.31950642,3,0,126,55,75,151,6,50.7538001838,4.15929439045,male,Reumatoide artritis,1,85
+Arthur Allen,12,null,false,Deb Schroder,149,secundair,Anglicaans,1418.6174862,14,4,123,98,111,65,79,50.8967289375,4.35613926188,male,Perifere artrose,1,31
+Mabel Johnson,13,null,false,Bennett Hannaman,168,lager secundair,Orhodox,4681.93876024,0,0,157,95,122,57,32,50.7518024103,4.60626431605,female,Chronische nek- en rugklachten,1,74
+Shu Douglass,14,null,false,Jeanne Valletta,145,hoger onderwijs (lang),Katholiek,4738.98450697,0,5,124,89,55,149,83,50.9375901817,4.27229931196,female,Persoonlijkheidsstoornissen,1,60
+Louise Karban,15,null,false,Wilma Popham,138,universitair,Katholiek,4952.95735362,0,0,110,96,65,121,75,50.8479804979,5.15440406586,female,Verstandelijke handicap,1,1
+Alexander Harris,16,null,false,Bennett Hannaman,210,universitair,Orhodox,4472.37363901,19,4,99,54,68,141,21,50.7957387745,4.03006564158,male,Aids en hiv-infectie,1,12
+Angelica Arroyo,17,null,false,Gerald Charity,114,hoger onderwijs (lang),Moslim,911.888545665,18,2,125,47,54,54,3,51.0056207574,4.04517135972,female,Osteoporose,1,39
+Astrid Anderson,18,null,false,Bennett Hannaman,126,secundair,Anglicaans,2360.13226023,20,5,98,46,55,71,33,50.8413554432,4.78361306116,female,Osteoporose,1,15
+Julio Fullerton,19,null,false,Evan Ogilvie,196,secundair,Orhodox,3251.42037813,0,3,187,46,112,147,105,50.7759674889,4.08351124677,male,Aangeboren afwijkingen van het hartvaatstelsel,1,85
+Rebecca Ashcraft,20,null,false,Milly Slusser,206,hoger onderwijs (lang),Moslim,3411.37318691,12,1,168,79,52,98,25,50.9286494336,4.51909532873,female,COPD,1,44
+Amanda Hooper,21,null,false,Deb Schroder,146,hoger onderwijs (kort),Anglicaans,2435.64599049,0,2,75,41,106,78,108,50.8445981266,4.00652848466,female,Epilepsie,1,17
+Joshua Hurley,22,null,false,Bennett Hannaman,120,lager secundair,Prostestants,4140.49891133,0,0,168,83,23,156,34,50.8004867838,4.03539985881,male,Reumatoide artritis,1,74
+Ashley Wimberly,23,null,false,Wilma Popham,187,secundair,Moslim,3803.39335755,0,1,159,79,119,131,14,50.9129845517,4.49107721517,female,Gehoorstoornissen,1,95
+Colleen Morris,24,null,false,Evan Ogilvie,208,secundair,Orhodox,4686.10741157,7,2,176,49,146,130,8,50.9778430735,4.87480828319,female,Beroerte,1,57
+Bryan Nilsson,25,null,false,Wilma Popham,151,universitair,Vrijzinnig,2944.25500043,0,5,122,64,129,160,81,50.8494981428,3.92996137796,male,Hartritmestoornissen,1,86
+Charles Vanhorn,26,null,false,Bennett Hannaman,121,universitair,Moslim,4048.26500429,0,1,168,92,85,155,59,50.8071562395,5.08841848585,male,Persoonlijkheidsstoornissen,1,97
+Regina Madison,27,null,false,Evan Ogilvie,172,secundair,Anglicaans,4246.49535457,0,1,71,70,138,150,39,50.9266815983,4.94309860304,female,Perifere artrose,1,48
+Robert Frantz,28,null,false,Deb Schroder,105,lager secundair,Prostestants,2535.44717537,16,1,97,68,131,62,109,50.8838598551,4.08104006343,male,Perifere artrose,1,52
+Janet White,29,null,false,Milly Slusser,125,universitair,Joods,3624.01793224,0,4,90,72,127,151,27,51.0070983788,4.68677707237,female,Epilepsie,1,44
+Kim Grady,30,null,false,Caterina Quiroz,91,lager secundair,Prostestants,2305.83760311,0,0,100,78,81,121,13,51.0063052685,3.95644268624,female,Perifere artrose,1,52
+Joseph Dobson,31,null,false,Bennett Hannaman,203,hoger onderwijs (lang),Katholiek,2159.49357015,19,1,72,41,116,124,24,50.9324966735,4.43200832613,male,Verstandelijke handicap,1,13
+Marjorie Polanco,32,null,false,Milly Slusser,181,universitair,Prostestants,2079.87811095,0,5,145,53,44,72,108,50.87033456,4.06975170285,female,Aandoeningen van het endocard/hartklepafwijkingen,1,14
+Eddie Williford,33,null,false,Milly Slusser,137,secundair,Joods,1312.03660827,0,2,144,85,26,64,72,51.0186432962,5.13787720012,male,Verstandelijke handicap,1,17
+Guy Shield,34,null,false,Milly Slusser,154,universitair,Joods,2088.43388077,0,5,146,92,101,84,80,50.7675206531,3.9444750476,male,Gehoorstoornissen,1,23
+Patricia Joyce,35,null,false,Gerald Charity,153,lager secundair,Prostestants,2261.29954603,20,1,169,48,149,58,100,50.9842976875,4.55870945859,female,Chronische nek- en rugklachten,1,54
+James Poli,36,null,false,Evan Ogilvie,121,secundair,Prostestants,1104.10504303,0,4,110,71,59,143,101,50.7563942403,4.05964017696,male,Migraine,1,24
+Micaela Alvarez,37,null,false,Ninfa Mandeville,128,universitair,Katholiek,1378.88657845,9,5,186,70,135,149,6,50.9634200382,4.00776093979,female,Hartfalen,1,97
+Nichole Spies,38,null,false,Deb Schroder,110,universitair,Moslim,1300.31466223,0,2,87,82,133,108,71,50.9363278894,4.87658087847,female,Osteoporose,1,86
+Rene Goines,39,null,false,Caterina Quiroz,176,hoger onderwijs (lang),Vrijzinnig,1221.79815533,0,5,143,48,120,117,26,50.9141590506,3.96090554218,male,Coronaire hartziekten,1,12
+Jessica Lee,40,null,false,Caterina Quiroz,197,lager secundair,Vrijzinnig,4518.8526336,8,2,179,93,139,134,71,50.9313663777,4.56998581454,female,Kanker,1,95
+John Rowland,41,null,false,Cathern Dagenhart,115,universitair,Katholiek,1886.53794131,14,5,165,62,65,99,55,50.7932722016,4.96190668326,male,Dementie (inclusief alzheimer),1,88
+Leroy Macinnes,42,null,false,Caterina Quiroz,197,universitair,Prostestants,1202.37933995,0,3,130,79,107,138,15,50.6980005544,4.40111802986,male,Aids en hiv-infectie,1,17
+Jack Holiday,43,null,false,Caterina Quiroz,120,lager secundair,Prostestants,894.056072438,0,3,101,76,41,157,42,50.7000364398,4.46120033418,male,Aandoeningen gerelateerd aan alcohol,1,58
+Roger Alfonso,44,null,false,Wilma Popham,95,hoger onderwijs (lang),Joods,3276.19002981,10,2,167,78,29,134,30,50.6984882182,4.28190633148,male,Beroerte,1,27
+Mildred Turner,45,null,false,Caterina Quiroz,197,lager secundair,Anglicaans,4970.35357153,6,0,126,74,95,122,32,50.9383913024,4.48160712741,female,Hartritmestoornissen,1,74
+Joan Soule,46,null,false,Bennett Hannaman,150,lager secundair,Anglicaans,2311.11035662,13,3,147,45,145,76,55,51.013128659,4.25697779419,female,Epilepsie,1,57
+Pamela Matthews,47,null,false,Cathern Dagenhart,106,universitair,Vrijzinnig,4748.99352876,0,4,71,63,78,105,91,50.7996575356,4.73053224448,female,Diabetes mellitus,1,89
+Dana Rowles,48,null,false,Wilma Popham,114,hoger onderwijs (kort),Joods,1138.09668722,0,2,89,90,40,71,73,50.7150356675,4.98930254326,male,Ziekte van Parkinson,1,58
+Jonathan Himmel,49,null,false,Caterina Quiroz,104,lager secundair,Prostestants,2146.22801625,0,1,150,74,131,52,1,50.9764885358,4.64712992696,male,Angststoornissen,1,11
+Edward French,50,null,false,Cathern Dagenhart,143,secundair,Vrijzinnig,3053.67787749,0,0,163,98,131,84,33,50.8144049431,4.64719177838,male,Perifere artrose,1,96
+Earl Anderson,51,null,false,Cathern Dagenhart,127,hoger onderwijs (kort),Anglicaans,3513.91316102,0,0,134,68,46,75,107,50.9386037734,4.426170939,male,COPD,1,55
+Kayla Stlaurent,52,null,false,Evan Ogilvie,135,lager secundair,Vrijzinnig,2493.91977869,0,5,152,93,69,91,67,50.8973468785,4.6058417863,female,Diabetes mellitus,1,36
+Sandra Morris,53,null,false,Milly Slusser,111,lager secundair,Orhodox,4787.63867507,0,3,96,95,85,137,72,51.0290340005,4.80628870136,female,Hartritmestoornissen,1,78
+Sheila Mendes,54,null,false,Milly Slusser,90,lager secundair,Joods,1887.19320357,0,4,175,92,38,75,36,50.742254541,4.25725859414,female,Schizofrenie,1,27
+Gloria Booker,55,null,false,Wilma Popham,208,hoger onderwijs (lang),Joods,2742.72492813,6,0,186,58,110,119,20,50.8673154513,4.05925613659,female,Coronaire hartziekten,1,17
+Irma Bodner,56,null,false,Wilma Popham,178,hoger onderwijs (kort),Vrijzinnig,4342.38098977,0,2,145,66,139,75,16,50.7433361161,4.37742886621,female,Aids en hiv-infectie,1,87
+Jennifer Grisby,57,null,false,Ninfa Mandeville,92,universitair,Prostestants,4762.67155534,0,4,148,82,79,146,40,50.8285149497,3.90530465722,female,Hartfalen,1,6
+Martha Isom,58,null,false,Wilma Popham,172,secundair,Katholiek,1758.84303668,2,4,98,90,114,121,21,50.7110032715,3.9084848619,female,Perifere artrose,1,8
+Joann Stapleton,59,null,false,Deb Schroder,117,lager secundair,Prostestants,4382.01079781,18,0,84,88,94,97,101,50.9147943239,5.17672182916,female,Beroerte,1,70
+Jeramy Day,60,null,false,Bennett Hannaman,147,lager secundair,Katholiek,950.846755877,0,0,128,64,96,124,48,50.9656529344,5.02524322722,male,Kanker,1,99
+Filiberto Yang,61,null,false,Gerald Charity,148,hoger onderwijs (lang),Katholiek,4328.78866952,0,5,179,84,37,75,77,50.8117182152,4.33268960755,male,Hartfalen,1,42
+Rose Conner,62,null,false,Evan Ogilvie,195,universitair,Katholiek,4593.83451152,9,0,129,99,132,147,101,50.950148243,4.66106952083,female,Kanker,1,11
+Rose Johnson,63,null,false,Milly Slusser,204,lager secundair,Orhodox,4566.58480085,18,3,89,67,63,71,23,50.7867095938,4.01571361858,female,Osteoporose,1,25
+Helen Mcclain,64,null,false,Milly Slusser,192,secundair,Prostestants,4935.78089904,6,5,169,40,30,139,72,50.9884068304,4.40713032783,female,Stemmingsstoornissen,1,63
+William Mcinnis,65,null,false,Deb Schroder,149,universitair,Orhodox,3600.48709585,12,1,175,69,84,159,15,50.958838852,4.33405084053,male,COPD,1,52
+Jackie Velasquez,66,null,false,Evan Ogilvie,92,hoger onderwijs (kort),Anglicaans,4317.37117442,0,4,117,79,132,145,31,50.9340464735,4.51966395316,female,Aandoeningen gerelateerd aan alcohol,1,69
+Rosario George,67,null,false,Deb Schroder,173,universitair,Joods,4181.0296978,0,3,173,41,104,88,91,51.023611074,4.44478611967,male,Aandoeningen van het endocard/hartklepafwijkingen,1,6
+David Hall,68,null,false,Deb Schroder,100,hoger onderwijs (kort),Prostestants,1548.57205675,0,2,188,52,146,139,75,51.0004347772,4.41172329551,male,Migraine,1,76
+Paul Magana,69,null,false,Gerald Charity,159,secundair,Prostestants,4294.90118158,6,1,99,75,141,50,2,50.9886151849,4.76544420175,male,Aids en hiv-infectie,1,38
+Maria Galvez,70,null,false,Cathern Dagenhart,103,secundair,Moslim,3014.5462311,13,5,127,72,33,148,76,50.8106690488,4.08405986259,female,Migraine,1,77
+John Schaeffer,71,null,false,Milly Slusser,190,hoger onderwijs (kort),Orhodox,3168.62409123,0,2,108,86,126,138,60,50.9700881742,4.54293285742,male,Osteoporose,1,67
+Eileen Thornton,72,null,false,Evan Ogilvie,131,universitair,Vrijzinnig,2353.47425489,20,3,177,94,56,139,7,51.0351778883,4.92314848573,female,Hartritmestoornissen,1,63
+James Jinks,73,null,false,Caterina Quiroz,185,universitair,Vrijzinnig,4712.27804399,13,5,186,72,105,61,32,50.9910675965,5.15092310089,male,Overspanning/burn-out,1,42
+Emma Jensen,74,null,false,Jeanne Valletta,97,lager secundair,Moslim,1583.55911946,0,4,120,75,94,135,39,50.7436270985,4.50652838916,female,Beroerte,1,38
+Larue Hickernell,75,null,false,Milly Slusser,119,secundair,Prostestants,3199.94296624,0,5,111,84,85,84,59,50.9324130463,4.73038581646,female,Schizofrenie,1,38
+Amanda Lopez,76,null,false,Jeanne Valletta,194,secundair,Joods,1803.17735472,16,1,169,73,139,116,30,51.0078788936,4.686304352,female,Persoonlijkheidsstoornissen,1,44
+Valerie Nardi,77,null,false,Evan Ogilvie,130,hoger onderwijs (kort),Joods,3169.05929085,9,5,176,56,56,84,106,51.0067585455,5.04987339054,female,Migraine,1,40
+Mark Kepley,78,null,false,Deb Schroder,209,hoger onderwijs (lang),Katholiek,4223.8711451,0,1,139,44,101,109,81,50.788495609,4.05616769983,male,Aandoeningen gerelateerd aan alcohol,1,56
+John Stallings,79,null,false,Ninfa Mandeville,135,lager secundair,Joods,3772.63002617,5,4,175,97,104,50,52,50.6954114089,4.60012472943,male,Aandoeningen gerelateerd aan alcohol,1,88
+John Mendoza,80,null,false,Milly Slusser,190,lager secundair,Katholiek,1508.01226803,14,2,124,93,33,66,9,50.7637234177,4.00113439167,male,Aandoeningen gerelateerd aan alcohol,1,67
+Stephanie Compton,81,null,false,Evan Ogilvie,169,hoger onderwijs (kort),Prostestants,2222.99126085,6,5,182,100,137,65,59,50.8640199645,4.8079873953,female,Ziekte van Parkinson,1,86
+Michael Smith,82,null,false,Wilma Popham,107,hoger onderwijs (lang),Orhodox,2240.17797889,0,3,115,49,120,74,31,50.8503424689,3.97945638764,male,Aangeboren afwijkingen van het hartvaatstelsel,1,97
+Richard Johnson,83,null,false,Cathern Dagenhart,90,lager secundair,Vrijzinnig,3726.69797384,8,4,128,95,149,66,3,50.9073746349,4.74975678875,male,Aangeboren afwijkingen van het hartvaatstelsel,1,74
+Frank Admire,84,null,false,Cathern Dagenhart,149,lager secundair,Moslim,1503.11202086,0,5,111,92,79,79,81,50.9059808078,4.58408911542,male,Astma,1,47
+Goldie Thompson,85,null,false,Evan Ogilvie,210,secundair,Anglicaans,4181.22179604,18,5,92,87,136,92,63,51.045591882,4.12376642827,female,Chronische nek- en rugklachten,1,40
+Erin Little,86,null,false,Cathern Dagenhart,127,universitair,Anglicaans,855.670187832,20,4,122,72,20,115,15,51.0093621785,4.97304827798,female,Persoonlijkheidsstoornissen,1,32
+Jasmine Dobson,87,null,false,Deb Schroder,124,secundair,Orhodox,2009.11356192,17,2,173,59,78,140,57,50.9046682777,4.4981346351,female,Gehoorstoornissen,1,30
+Matthew Amos,88,null,false,Gerald Charity,162,hoger onderwijs (kort),Katholiek,2693.99601616,0,2,111,62,122,141,67,50.8499138894,4.58353812079,male,Aids en hiv-infectie,1,46
+Jerry Wilkerson,89,null,false,Deb Schroder,99,lager secundair,Prostestants,3345.03712946,0,0,159,63,46,93,4,50.7006537516,4.26466767623,male,Verstandelijke handicap,1,73
+Samantha Cruz,90,null,false,Caterina Quiroz,153,hoger onderwijs (kort),Joods,3900.74939367,12,5,184,99,143,115,56,50.9125477728,4.18699120621,female,Gezichtsstoornissen,1,12
+Margaret Roberts,91,null,false,Milly Slusser,167,universitair,Vrijzinnig,1762.60859493,13,2,161,42,144,137,41,50.8391103582,4.06546936696,female,Gezichtsstoornissen,1,26
+Arturo Cruzan,92,null,false,Evan Ogilvie,202,secundair,Vrijzinnig,3130.4380333,0,0,83,65,147,123,20,50.8115217336,4.2505438043,male,Schizofrenie,1,34
+John Lamaster,93,null,false,Jeanne Valletta,198,hoger onderwijs (lang),Anglicaans,2042.46425994,0,5,98,87,55,107,99,50.8145097861,4.88078327013,male,COPD,1,24

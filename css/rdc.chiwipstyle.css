@@ -219,3 +219,40 @@ ul {
 .axis.x.left text, .axis.x.right text {
     fill: white;
 }
+
+table {
+    width: 100%;
+}
+
+/*.nowrap {*/
+/*white-space: nowrap;*/
+/*overflow: hidden;*/
+/*}*/
+
+table tr td {
+    padding: 5px;
+    background: rgba(70, 130, 180, 0.1);
+}
+
+table tr img {
+    padding: 5px;
+    background: rgba(70, 130, 180, 0.1);
+}
+
+table th {
+    padding: 10px;
+    background: rgba(70, 130, 180, 0.7);
+    color: #ffffff;
+
+}
+
+tr:hover {
+    background: steelblue;
+    color: #ffffff;
+}
+
+.imageCell {
+    width: 95%;
+    height: 95%;
+    /*margin-left: 50px;*/
+}
