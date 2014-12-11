@@ -35,14 +35,20 @@ function DoubleHorizontalBarChart(divID, title) {
 
     this.upperLayer = this.internalChart.append('g')
         .attr('transform', translation(marginLeft, marginTop + this.titleOffset));
+
+    this.currentLeftFilter;
+    this.currentRightFilter;
 }
 
 DoubleHorizontalBarChart.prototype.prepareData = function (data, var1, var2) {
+//DoubleHorizontalBarChart.prototype.prepareData = function (ageDimension, genderDimension) {
+
+    // age en gender filter toevoegen
 
     var _this = this;
 
+    // empty JSON
     var groups = resetData();
-
     var groupNames = groups.map(function (d) {
         return d.group;
     });
@@ -158,6 +164,17 @@ DoubleHorizontalBarChart.prototype.prepareData = function (data, var1, var2) {
 
     leftBars.exit().remove();
 
+    leftBars.on("click", function (d) {
+        if (_this.currentLeftFilter == undefined) {
+            _this.currentLeftFilter = d.key;
+            data.filter(_this.currentLeftFilter);
+        } else {
+            _this.currentLeftFilter = undefined;
+            data.filter(null);
+        }
+        updateWidgets();
+    });
+
     var rightBars = _this.lowerLayer.selectAll('.bar.right')
         .data(groups);
 
@@ -178,6 +195,17 @@ DoubleHorizontalBarChart.prototype.prepareData = function (data, var1, var2) {
         });
 
     rightBars.exit().remove();
+
+    rightBars.on("click", function (d) {
+        if (_this.currentRightFilter == undefined) {
+            _this.currentRightFilter = d.key;
+            data.filter(_this.currentRightFilter);
+        } else {
+            _this.currentRightFilter = undefined;
+            data.filter(null);
+        }
+        updateWidgets();
+    });
 
     var leftGenderAgeTextScores = _this.upperLayer.selectAll("text.barTextR")
         .data(groups);

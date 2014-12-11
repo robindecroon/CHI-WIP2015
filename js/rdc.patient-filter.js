@@ -37,6 +37,9 @@ var religion = 'religie';
 var icpc = 'icpc';
 var degree = 'diploma';
 var careGiver = 'hoofddokter';
+var gender = 'geslacht';
+
+var patientsByGender;
 
 var myDimensions = [nbDays, income, bloodHigh, bloodLow, weight, sugar, age];
 var myQualitativeDimensions = [religion, icpc, degree, careGiver];
@@ -47,6 +50,9 @@ var crossFilterDimensions = [];
 d3.csv('data/testdata.csv', function (data) {
     var patients = crossfilter(data);
 
+    patientsByGender = patients.dimension(function (d) {
+        return d[gender];
+    })
 
     myDimensions.forEach(function (dim) {
         var tempDim = patients.dimension(function (d) {
@@ -138,6 +144,10 @@ function updateWidgets() {
             case careGiver:
                 physicianChart.createChart(crossDimension);
                 break;
+            //case age:
+            //    genderAgeChart.prepareData(crossDimension, patientsByGender);
+
+
         }
     }
     var filteredData = crossFilterDimensions[0].crossDim.top(Infinity);
